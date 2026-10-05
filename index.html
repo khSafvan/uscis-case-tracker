@@ -2,37 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>USCIS Case Tracker — Free Privacy-Focused Immigration Case Status API Tracker</title>
+  <title>USCIS Case Tracker — Privacy-Focused Immigration Case Status Tracker</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
 
   <!-- Primary Meta Tags -->
-  <meta name="title" content="USCIS API Case Tracker — Free Privacy-Focused Immigration Case Status Tracker"/>
+  <meta name="title" content="USCIS Case Tracker — Privacy-Focused Immigration Case Status Tracker"/>
   <meta name="description" content="Track your USCIS immigration case status with complete privacy. 100% client-side tracker with unified timeline, multiple case support, and automatic updates. No data sent to servers. Free and open source."/>
-  <meta name="keywords" content="USCIS case tracker, immigration case status, green card tracker, visa tracker, I-485 tracker, I-765 tracker, I-131 tracker, USCIS timeline, immigration status, case status tracker, privacy-focused, client-side tracker, free USCIS tracker"/>
   <meta name="author" content="USCIS Case Tracker"/>
   <meta name="robots" content="index, follow"/>
-  <meta name="language" content="English"/>
-  <meta name="revisit-after" content="7 days"/>
-  <meta name="geo.region" content="US"/>
-  <meta name="geo.placename" content="United States"/>
-  <meta name="rating" content="general"/>
-  <meta name="distribution" content="global"/>
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://humanstack.github.io/uscis-case-tracker/"/>
-  <meta property="og:title" content="USCIS Case Tracker — Free Privacy-Focused Immigration Case Status Tracker"/>
-  <meta property="og:description" content="Track your USCIS immigration case status with complete privacy. 100% client-side tracker with unified timeline, multiple case support, and automatic updates. No data sent to servers."/>
-  <meta property="og:image" content="https://humanstack.github.io/uscis-case-tracker/og-image.png"/>
+  <meta property="og:title" content="USCIS Case Tracker — Privacy-Focused Case Status Tracker"/>
+  <meta property="og:description" content="Track your USCIS immigration case status with complete privacy. 100% client-side, no data sent to servers."/>
   <meta property="og:site_name" content="USCIS Case Tracker"/>
-  <meta property="og:locale" content="en_US"/>
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image"/>
-  <meta property="twitter:url" content="https://humanstack.github.io/uscis-case-tracker/"/>
-  <meta property="twitter:title" content="USCIS Case Tracker — Free Privacy-Focused Immigration Case Status Tracker"/>
-  <meta property="twitter:description" content="Track your USCIS immigration case status with complete privacy. 100% client-side tracker with unified timeline and automatic updates."/>
-  <meta property="twitter:image" content="https://humanstack.github.io/uscis-case-tracker/twitter-image.png"/>
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://humanstack.github.io/uscis-case-tracker/"/>
@@ -40,1726 +24,1007 @@
   <!-- PWA Manifest -->
   <link rel="manifest" href="/manifest.json"/>
 
-  <!-- Theme and App Icons -->
-  <meta name="theme-color" content="#2563eb"/>
+  <!-- Theme -->
+  <meta name="theme-color" content="hsl(220, 15%, 18%)"/>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>"/>
-  <meta name="color-scheme" content="light"/>
+  <meta name="color-scheme" content="light dark"/>
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
   <meta name="apple-mobile-web-app-title" content="USCIS Tracker"/>
 
-  <!-- Structured Data / JSON-LD for WebApplication -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "USCIS Case Tracker",
-    "alternateName": "Immigration Case Status Tracker",
-    "description": "A privacy-focused USCIS immigration case tracker that runs entirely in your browser. Track multiple cases, view unified timeline, and monitor updates without sending any data to external servers.",
-    "url": "https://humanstack.github.io/uscis-case-tracker/",
-    "applicationCategory": "UtilityApplication",
-    "operatingSystem": "Any",
-    "browserRequirements": "Requires JavaScript. Requires HTML5.",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "featureList": [
-      "100% client-side processing",
-      "Zero data sent to servers",
-      "Track multiple USCIS cases",
-      "Unified timeline view",
-      "Automatic date grouping",
-      "Receipt number masking",
-      "Smart insights on case updates",
-      "JSON data comparison",
-      "Reddit-friendly export",
-      "Business hours detection"
-    ],
-    "screenshot": "https://humanstack.github.io/uscis-case-tracker/screenshot.png",
-    "softwareVersion": "1.0",
-    "author": {
-      "@type": "Organization",
-      "name": "USCIS Case Tracker Team"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "ratingCount": "1"
-    }
-  }
-  </script>
-
-  <!-- Structured Data for FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
-      "@type": "Question",
-      "name": "How do I track my USCIS case status?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To track your USCIS case: 1) Add your receipt number to the tracker, 2) Log in to myaccount.uscis.gov, 3) Click 'Open API tabs' to get your case data, 4) Paste the JSON into the tracker. Your timeline will update automatically with all case history."
-      }
-    },{
-      "@type": "Question",
-      "name": "Is the USCIS Case Tracker free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, the USCIS Case Tracker is completely free and open source. There are no subscriptions, fees, or hidden costs. You can track unlimited cases forever at no charge."
-      }
-    },{
-      "@type": "Question",
-      "name": "Is my immigration data safe and private?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, your data is completely private. The USCIS Case Tracker runs 100% in your browser with zero data sent to any servers. All information is stored locally on your device using browser localStorage."
-      }
-    },{
-      "@type": "Question",
-      "name": "What USCIS forms can I track?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can track all USCIS forms including I-485 (Green Card), I-765 (Work Permit/EAD), I-131 (Travel Document/Advance Parole), I-140, I-130, N-400 (Citizenship), I-129 (H-1B), and all other USCIS case types."
-      }
-    }]
-  }
-  </script>
-
-  <!-- Structured Data for Breadcrumbs -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [{
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://humanstack.github.io/uscis-case-tracker/"
-    }]
-  }
-  </script>
   <style>
-    /* Modern CSS Reset */
+    /* ── Reset ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      /* Modern color palette using HSL */
-      --hue-primary: 222;  /* Deep blue */
-      --hue-success: 142;  /* Emerald */
-      --hue-warning: 38;   /* Amber */
-      --hue-error: 358;    /* Ruby */
+      --bg:       hsl(220 14% 96%);
+      --surface:  hsl(0 0% 100%);
+      --border:   hsl(220 13% 91%);
+      --text:     hsl(220 15% 18%);
+      --text-2:   hsl(220 10% 44%);
+      --text-3:   hsl(220 8% 62%);
 
-      /* Core colors */
-      --bg: hsl(var(--hue-primary) 25% 97%);
-      --card: hsl(0 0% 100%);
-      --border: hsl(var(--hue-primary) 15% 90%);
-      --text: hsl(var(--hue-primary) 30% 12%);
-      --text-light: hsl(var(--hue-primary) 15% 45%);
-      --muted: hsl(var(--hue-primary) 10% 55%);
+      --accent:       hsl(220 80% 52%);
+      --accent-soft:  hsl(220 80% 96%);
+      --accent-border:hsl(220 60% 85%);
 
-      /* Accent colors */
-      --accent: hsl(var(--hue-primary) 90% 50%);
-      --accent-light: hsl(var(--hue-primary) 90% 96%);
-      --accent-hover: hsl(var(--hue-primary) 85% 45%);
-      --accent-border: hsl(var(--hue-primary) 90% 85%);
+      --green:       hsl(152 60% 40%);
+      --green-soft:  hsl(152 60% 95%);
+      --green-border:hsl(152 40% 78%);
+      --amber:       hsl(38 90% 48%);
+      --amber-soft:  hsl(38 90% 95%);
+      --amber-border:hsl(38 60% 78%);
+      --red:         hsl(0 72% 51%);
+      --red-soft:    hsl(0 72% 96%);
+      --red-border:  hsl(0 50% 82%);
 
-      /* Status colors */
-      --success: hsl(var(--hue-success) 85% 40%);
-      --success-light: hsl(var(--hue-success) 85% 96%);
-      --success-border: hsl(var(--hue-success) 60% 75%);
-      --warning: hsl(var(--hue-warning) 95% 45%);
-      --warning-light: hsl(var(--hue-warning) 95% 96%);
-      --warning-border: hsl(var(--hue-warning) 80% 70%);
-      --error: hsl(var(--hue-error) 95% 45%);
-      --error-light: hsl(var(--hue-error) 95% 96%);
-      --error-border: hsl(var(--hue-error) 80% 75%);
-
-      /* Spacing system - 4pt grid */
-      --space-2xs: 0.125rem; /* 2px */
-      --space-xs: 0.25rem;   /* 4px */
-      --space-sm: 0.5rem;    /* 8px */
-      --space-md: 0.75rem;   /* 12px */
-      --space-lg: 1rem;      /* 16px */
-      --space-xl: 1.5rem;    /* 24px */
-      --space-2xl: 2rem;     /* 32px */
-      --space-3xl: 3rem;     /* 48px */
-
-      /* Typography */
-      --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      --line-height-tight: 1.25;
-      --line-height-normal: 1.6;
-      --line-height-relaxed: 1.75;
-
-      /* Shadows */
-      --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
-      --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
-      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
-      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-      --shadow-focus: 0 0 0 3px hsl(var(--hue-primary) 90% 50% / 0.15);
-
-      /* Animation */
-      --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-      --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
-
-      /* Border radius */
-      --radius-sm: 0.375rem;
-      --radius-md: 0.5rem;
+      --radius: 0.5rem;
       --radius-lg: 0.75rem;
-      --radius-xl: 1rem;
-      --radius-2xl: 1.5rem;
-      --radius-full: 9999px;
+      --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-lg: 0 4px 12px rgba(0,0,0,0.08);
+      --transition: 150ms ease;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: var(--font-sans);
-      line-height: var(--line-height-normal);
+      font-family: var(--font);
+      line-height: 1.6;
       background: var(--bg);
       color: var(--text);
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
       min-height: 100vh;
     }
 
+    /* ── Header ── */
     header {
-      background: linear-gradient(135deg, hsl(var(--hue-primary) 95% 55%) 0%, hsl(var(--hue-primary) 85% 48%) 100%);
-      color: white;
-      padding: var(--space-2xl) var(--space-lg);
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: var(--shadow-lg);
-      backdrop-filter: blur(10px);
-      transition: padding var(--transition-normal);
-    }
-
-    header h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: var(--space-sm);
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    header p {
-      font-size: 0.9375rem;
-      color: rgba(255, 255, 255, 0.95);
-      max-width: 32rem;
-      margin: 0 auto var(--space-md);
-      font-weight: 500;
-      line-height: var(--line-height-relaxed);
-    }
-
-    main {
-      max-width: 68rem;
-      margin: 0 auto;
-      padding: var(--space-2xl) var(--space-lg) var(--space-3xl);
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: var(--radius-xl);
-      margin-bottom: var(--space-2xl);
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--border);
-      transition: all var(--transition-normal);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: var(--space-md);
-      padding: var(--space-xl);
-      border-bottom: 1px solid var(--border);
-      background: linear-gradient(to bottom, hsl(var(--hue-primary) 20% 98%), var(--card));
-    }
-
-    .card-header h2 {
-      margin: 0;
-    }
-
-    .card > *:not(.card-header):not(.card-body):not(.collapsed-content) {
-      padding: var(--space-xl);
-    }
-
-    .export-btn {
-      background: var(--accent-light);
-      color: var(--accent);
-      border: 1px solid var(--accent-border);
-      font-size: 0.875rem;
-      padding: var(--space-sm) var(--space-lg);
-      font-weight: 600;
-      transition: all var(--transition-normal);
-    }
-
-    .export-btn:hover {
-      background: var(--accent);
-      color: white;
-      border-color: var(--accent);
-      transform: translateY(-1px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .card:hover {
-      box-shadow: var(--shadow-md);
-    }
-
-    .card::before {
-      content: '';
-      position: absolute;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      position: sticky;
       top: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(90deg, hsl(var(--hue-primary) 95% 55%), hsl(var(--hue-primary) 85% 48%));
-      opacity: 0;
-      transition: opacity var(--transition-normal);
+      z-index: 100;
     }
 
-    .card:hover::before {
-      opacity: 1;
-    }
-
-    /* Collapsible card styles */
-    .card.collapsible .card-header {
-      cursor: pointer;
-      user-select: none;
-      transition: all var(--transition-normal);
-    }
-
-    .card.collapsible .card-header:hover {
-      background: linear-gradient(to bottom, var(--accent-light), hsl(var(--hue-primary) 95% 98%));
-    }
-
-    .card.collapsible .card-header:active {
-      transform: scale(0.995);
-    }
-
-    .card.collapsible .card-body {
-      overflow: hidden;
-      transition: max-height var(--transition-slow) cubic-bezier(0.4, 0, 0.2, 1),
-                  padding var(--transition-slow) cubic-bezier(0.4, 0, 0.2, 1),
-                  opacity var(--transition-normal);
-    }
-
-    .card.collapsible.collapsed .card-body {
-      max-height: 0 !important;
-      padding: 0 var(--space-xl);
-      opacity: 0;
-    }
-
-    .card.collapsible:not(.collapsed) .card-body {
-      max-height: 2000px;
-      padding: var(--space-xl);
-      opacity: 1;
-    }
-
-    .collapse-icon {
-      transition: transform var(--transition-normal), color var(--transition-normal);
-      margin-left: auto;
-      color: var(--text-light);
-      flex-shrink: 0;
-    }
-
-    .card.collapsible .card-header:hover .collapse-icon {
-      color: var(--accent);
-    }
-
-    .card.collapsible.collapsed .collapse-icon {
-      transform: rotate(-90deg);
-    }
-
-    /* Collapsed quick links */
-    .collapsed-content {
-      display: none;
-      padding: var(--space-md) var(--space-xl);
-      border-top: 1px solid var(--border);
-      background: linear-gradient(to bottom, var(--card), hsl(var(--hue-primary) 20% 99%));
-      animation: fadeIn var(--transition-normal);
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-4px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .card.collapsible.collapsed .collapsed-content {
+    .header-left {
       display: flex;
       align-items: center;
-      gap: var(--space-sm);
-      flex-wrap: wrap;
+      gap: 0.75rem;
     }
 
-    .quick-link {
+    .header-left h1 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .badge {
       display: inline-flex;
       align-items: center;
-      gap: var(--space-sm);
-      padding: var(--space-sm) var(--space-lg);
-      background: white;
-      color: var(--accent);
-      text-decoration: none;
-      border: 1px solid var(--accent-border);
-      border-radius: var(--radius-full);
-      font-size: 0.875rem;
+      gap: 0.375rem;
+      padding: 0.25rem 0.625rem;
+      font-size: 0.75rem;
       font-weight: 600;
-      transition: all var(--transition-normal);
+      border-radius: 100px;
+      border: 1px solid;
       white-space: nowrap;
     }
 
-    .quick-link:hover {
+    .badge-privacy {
+      background: var(--green-soft);
+      color: var(--green);
+      border-color: var(--green-border);
+    }
+
+    .badge-privacy .icon { width: 0.875rem; height: 0.875rem; }
+
+    .link-github {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      padding: 0.25rem 0.625rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-2);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      transition: background var(--transition), color var(--transition);
+    }
+
+    .link-github:hover {
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .link-github .icon { width: 0.875rem; height: 0.875rem; }
+
+    /* ── Layout ── */
+    main {
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    /* ── Privacy bar ── */
+    .privacy-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding: 0.625rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.8125rem;
+      color: var(--text-2);
+    }
+
+    .privacy-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+    }
+
+    .privacy-bar .icon { width: 1rem; height: 1rem; color: var(--green); }
+
+    .toggle-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      user-select: none;
+      font-size: 0.8125rem;
+      color: var(--text-2);
+    }
+
+    .toggle-wrap input { display: none; }
+
+    .toggle-track {
+      width: 2rem;
+      height: 1.125rem;
+      background: var(--border);
+      border-radius: 100px;
+      position: relative;
+      transition: background var(--transition);
+    }
+
+    .toggle-track::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 0.875rem;
+      height: 0.875rem;
+      background: white;
+      border-radius: 50%;
+      transition: transform var(--transition);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    }
+
+    .toggle-wrap input:checked + .toggle-track {
+      background: var(--accent);
+    }
+
+    .toggle-wrap input:checked + .toggle-track::after {
+      transform: translateX(0.875rem);
+    }
+
+    /* ── Card ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding: 0.875rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .card-head h2 {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card-head-actions {
+      display: flex;
+      gap: 0.375rem;
+    }
+
+    .card-body { padding: 1rem; }
+
+    /* Collapsible */
+    .card.collapsible .card-head {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .card.collapsible .card-head:hover { background: hsl(220 14% 98%); }
+
+    .collapse-icon {
+      width: 1rem; height: 1rem;
+      color: var(--text-3);
+      transition: transform var(--transition);
+      flex-shrink: 0;
+    }
+
+    .card.collapsed .collapse-icon { transform: rotate(-90deg); }
+    .card.collapsed .card-body { display: none; }
+    .card.collapsed .collapsed-quick { display: flex; }
+
+    .collapsed-quick {
+      display: none;
+      padding: 0.5rem 1rem;
+      border-top: 1px solid var(--border);
+      gap: 0.375rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* ── Step label ── */
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.375rem;
+      height: 1.375rem;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      border: 1.5px solid var(--accent-border);
+    }
+
+    .step-num.done {
+      background: var(--green);
+      color: white;
+      border-color: var(--green);
+    }
+
+    /* ── Buttons ── */
+    button, .btn {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.375rem;
+      font: inherit;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      padding: 0.5rem 0.875rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+
+    button:hover { border-color: var(--text-3); background: var(--bg); }
+    button:active { transform: scale(0.98); }
+    button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    button.primary {
       background: var(--accent);
       color: white;
       border-color: var(--accent);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
     }
 
-    .quick-link:active {
-      transform: translateY(0);
+    button.primary:hover { background: hsl(220 80% 46%); }
+
+    button.danger {
+      color: var(--red);
+      border-color: var(--red-border);
     }
 
-    .quick-link .icon {
-      width: 1.125em;
-      height: 1.125em;
-      margin: 0;
+    button.danger:hover { background: var(--red-soft); }
+
+    button.success-flash {
+      background: var(--green);
+      color: white;
+      border-color: var(--green);
     }
 
-    h2 {
-      color: var(--text);
-      font-weight: 700;
-      font-size: 1.5rem;
-      letter-spacing: -0.02em;
-      line-height: var(--line-height-tight);
+    button.sm {
+      padding: 0.375rem 0.625rem;
+      font-size: 0.75rem;
     }
 
-    h3 {
-      color: var(--text);
+    button.ghost {
+      background: transparent;
+      border-color: transparent;
+      color: var(--text-2);
+    }
+
+    button.ghost:hover { background: var(--bg); color: var(--text); border-color: transparent; }
+
+    .icon { width: 1rem; height: 1rem; flex-shrink: 0; }
+
+    .btn-group {
+      display: flex;
+      gap: 0.375rem;
+      flex-wrap: wrap;
+    }
+
+    /* ── Quick link pill ── */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
       font-weight: 600;
-      font-size: 1.25rem;
-      letter-spacing: -0.015em;
-      line-height: var(--line-height-tight);
+      color: var(--accent);
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      border-radius: 100px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all var(--transition);
     }
 
-    .input-group {
-      margin-bottom: var(--space-xl);
-    }
+    .pill:hover { background: var(--accent); color: white; border-color: var(--accent); }
+    .pill .icon { width: 0.75rem; height: 0.75rem; }
 
-    label {
-      display: block;
-      font-weight: 600;
-      font-size: 0.875rem;
-      color: var(--text);
-      margin-bottom: var(--space-sm);
-    }
-
+    /* ── Inputs ── */
     input, textarea {
       width: 100%;
-      padding: var(--space-md) var(--space-lg);
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-lg);
+      padding: 0.5rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
       font: inherit;
-      font-size: 0.9375rem;
+      font-size: 0.875rem;
       color: var(--text);
-      background: white;
-      transition: all var(--transition-normal);
-    }
-
-    input::placeholder, textarea::placeholder {
-      color: var(--muted);
-    }
-
-    input:hover, textarea:hover {
-      border-color: hsl(var(--hue-primary) 60% 80%);
+      background: var(--surface);
+      transition: border-color var(--transition);
     }
 
     input:focus, textarea:focus {
       outline: none;
       border-color: var(--accent);
-      box-shadow: var(--shadow-focus);
-      background: white;
+      box-shadow: 0 0 0 3px hsl(220 80% 52% / 0.1);
     }
+
+    input::placeholder, textarea::placeholder { color: var(--text-3); }
+
+    .input-row {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .input-row input { flex: 1; }
 
     .hint {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-3);
+      margin-top: 0.25rem;
+    }
+
+    .form-group { margin-bottom: 0.75rem; }
+    .form-group label {
+      display: block;
       font-size: 0.8125rem;
-      color: var(--text-light);
-      margin-top: var(--space-sm);
-      line-height: var(--line-height-normal);
-    }
-
-    button {
-      cursor: pointer;
-      padding: var(--space-md) var(--space-xl);
-      border-radius: var(--radius-lg);
-      border: 1.5px solid var(--border);
-      background: white;
-      font: inherit;
-      font-size: 0.9375rem;
       font-weight: 600;
-      color: var(--text);
-      transition: all var(--transition-normal);
-      margin-right: var(--space-sm);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: var(--space-sm);
-      position: relative;
+      margin-bottom: 0.25rem;
     }
 
-    button.primary {
-      background: linear-gradient(135deg, hsl(var(--hue-primary) 95% 55%) 0%, hsl(var(--hue-primary) 85% 48%) 100%);
-      color: white;
-      border: none;
-      box-shadow: var(--shadow-sm);
-    }
-
-    button:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-      border-color: hsl(var(--hue-primary) 60% 75%);
-    }
-
-    button.primary:hover {
-      box-shadow: var(--shadow-lg);
-      transform: translateY(-2px);
-    }
-
-    button:active {
-      transform: translateY(0);
-      box-shadow: var(--shadow-sm);
-    }
-
-    button:focus-visible {
-      outline: none;
-      box-shadow: var(--shadow-focus);
-    }
-
-    button:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .chip-container {
+    /* ── Chips ── */
+    .chip-list {
       display: flex;
       flex-wrap: wrap;
-      gap: var(--space-sm);
-      min-height: 3rem;
-      padding: var(--space-md);
-      background: linear-gradient(to bottom, hsl(var(--hue-primary) 20% 99%), hsl(var(--hue-primary) 20% 97%));
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border);
-    }
-
-    .chip-container:empty::after {
-      content: 'No receipts added yet';
-      color: var(--muted);
-      font-size: 0.875rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
+      gap: 0.375rem;
+      min-height: 2rem;
     }
 
     .chip {
       display: inline-flex;
       align-items: center;
-      background: white;
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-full);
-      padding: var(--space-sm) var(--space-lg) var(--space-sm) var(--space-md);
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--text);
-      position: relative;
-      transition: all var(--transition-normal);
-      gap: var(--space-sm);
-      box-shadow: var(--shadow-xs);
+      gap: 0.25rem;
+      padding: 0.25rem 0.5rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      font-family: var(--mono);
     }
 
-    .chip:hover {
-      border-color: var(--accent);
-      box-shadow: var(--shadow-sm);
-      transform: translateY(-1px);
-    }
-
-    .chip-delete {
-      padding: var(--space-xs);
-      margin: 0;
-      margin-left: var(--space-xs);
+    .chip-x {
+      padding: 0; margin: 0;
       border: none;
       background: transparent;
-      color: var(--text-light);
-      border-radius: var(--radius-full);
-      transition: all var(--transition-fast);
+      color: var(--text-3);
+      cursor: pointer;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
     }
 
-    .chip-delete:hover {
-      color: var(--error);
-      background: var(--error-light);
-      transform: none;
-      box-shadow: none;
+    .chip-x:hover { color: var(--red); }
+    .chip-x .icon { width: 0.75rem; height: 0.75rem; }
+
+    /* ── Sensitive data masking ── */
+    .sensitive {
+      transition: filter var(--transition);
     }
 
-    .chip-delete .icon {
-      width: 0.875rem;
-      height: 0.875rem;
-      margin: 0;
+    .mask-active .sensitive {
+      filter: blur(4px);
+      user-select: none;
     }
 
-    button.success {
-      background: linear-gradient(135deg, hsl(var(--hue-success) 85% 50%) 0%, hsl(var(--hue-success) 75% 42%) 100%);
-      color: white;
-      transform: translateY(0);
+    .mask-active .sensitive:hover {
+      filter: blur(0);
+      user-select: auto;
     }
 
-    /* Modal styles */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      z-index: 1000;
-      padding: var(--space-xl);
-      overflow-y: auto;
-      animation: fadeIn var(--transition-fast);
-    }
-
-    .modal-content {
-      background: var(--card);
-      border-radius: var(--radius-2xl);
-      max-width: 52rem;
-      margin: var(--space-2xl) auto;
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow-xl);
-      animation: slideUp var(--transition-normal);
-    }
-
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px) scale(0.98);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    .modal-header {
+    /* ── Quick stats ── */
+    .stats-row {
       display: flex;
-      align-items: center;
-      gap: var(--space-lg);
-      padding: var(--space-xl);
+      gap: 1rem;
+      padding: 0.75rem 1rem;
       border-bottom: 1px solid var(--border);
-      background: linear-gradient(to bottom, hsl(var(--hue-primary) 20% 98%), var(--card));
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .modal-header h3 {
-      margin: 0;
-      font-size: 1.375rem;
+    .stats-items {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-label {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-3);
+    }
+
+    .stat-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    /* ── Case summary cards ── */
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 0.75rem;
+      padding: 1rem;
+    }
+
+    .case-card {
+      padding: 0.875rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .case-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .case-card-receipt {
+      font-family: var(--mono);
+      font-size: 0.8125rem;
       font-weight: 700;
     }
 
-    .modal-close {
-      margin-left: auto;
-      padding: var(--space-sm);
-      color: var(--text-light);
-      border: none;
-      background: transparent;
-      border-radius: var(--radius-full);
+    .case-card-form {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: var(--text-2);
+      padding: 0.125rem 0.375rem;
+      background: var(--bg);
+      border-radius: 100px;
+    }
+
+    .case-card-status {
+      font-size: 0.8125rem;
+      color: var(--text-2);
+      margin-bottom: 0.5rem;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.125rem 0.5rem;
+      border-radius: 100px;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .status-badge.active {
+      background: var(--amber-soft);
+      color: var(--amber);
+      border: 1px solid var(--amber-border);
+    }
+
+    .status-badge.completed {
+      background: var(--green-soft);
+      color: var(--green);
+      border: 1px solid var(--green-border);
+    }
+
+    .case-card-meta {
+      display: flex;
+      gap: 0.75rem;
+      font-size: 0.75rem;
+      color: var(--text-3);
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .meta-label {
+      font-size: 0.625rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 600;
+    }
+
+    .meta-value {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* ── Timeline ── */
+    .timeline {
+      position: relative;
+      border-left: 2px solid var(--border);
+      margin: 0 0 0 0.75rem;
+      padding-left: 1.5rem;
+    }
+
+    .tgroup { margin-bottom: 1.25rem; position: relative; }
+
+    .tgroup::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: calc(-1.5rem - 5px);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 2px solid var(--accent);
+    }
+
+    .tdate {
+      font-weight: 700;
+      font-size: 0.8125rem;
+      color: var(--text-2);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .titem {
+      margin: 0.375rem 0;
+      padding: 0.625rem 0.75rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.8125rem;
+      transition: border-color var(--transition);
+    }
+
+    .titem:hover { border-color: var(--accent-border); }
+
+    .titem-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .titem-body { flex: 1; min-width: 0; }
+
+    .titem-time {
+      font-size: 0.75rem;
+      color: var(--text-3);
+      font-weight: 500;
+      margin-bottom: 0.125rem;
+    }
+
+    .titem-main {
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+      flex-wrap: wrap;
+    }
+
+    .titem-label {
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .flag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.1875rem;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      padding: 0.0625rem 0.375rem;
+      border-radius: 100px;
+      border: 1px solid transparent;
+    }
+
+    .flag.system  { color: var(--amber); background: var(--amber-soft); border-color: var(--amber-border); }
+    .flag.officer { color: var(--green); background: var(--green-soft); border-color: var(--green-border); }
+    .flag.complete{ color: var(--accent); background: var(--accent-soft); border-color: var(--accent-border); }
+
+    .insight {
+      margin-top: 0.375rem;
+      font-size: 0.75rem;
+      padding: 0.375rem 0.5rem;
+      border-radius: var(--radius);
+      line-height: 1.4;
+    }
+
+    .insight.info    { color: var(--text-2); background: var(--bg); border-left: 2px solid var(--accent-border); }
+    .insight.success { color: var(--green);  background: var(--green-soft); border-left: 2px solid var(--green); }
+
+    .btn-json {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: var(--text-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      transition: all var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
       flex-shrink: 0;
     }
 
-    .modal-close:hover {
-      color: var(--text);
-      background: var(--border);
-      transform: none;
-      box-shadow: none;
+    .btn-json:hover { color: var(--accent); border-color: var(--accent-border); }
+    .btn-json .icon { width: 0.75rem; height: 0.75rem; }
+
+    /* ── Empty state ── */
+    .empty-state {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--text-3);
+    }
+
+    .empty-state-title {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--text-2);
+      margin-bottom: 0.25rem;
+    }
+
+    .empty-state-desc {
+      font-size: 0.8125rem;
+      max-width: 24rem;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ── Modal ── */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+
+    .modal-box {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      max-width: 48rem;
+      margin: 2rem auto;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      animation: slideUp 200ms ease;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .modal-head {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.875rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .modal-head h3 {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      flex: 1;
     }
 
     .modal-tabs {
       display: flex;
-      gap: var(--space-xs);
-      background: hsl(var(--hue-primary) 20% 96%);
-      padding: var(--space-xs);
-      border-radius: var(--radius-lg);
+      gap: 0.25rem;
+      background: var(--bg);
+      padding: 0.25rem;
+      border-radius: var(--radius);
     }
 
     .tab-btn {
       background: transparent;
       border: none;
-      padding: var(--space-sm) var(--space-lg);
-      color: var(--text-light);
-      font-size: 0.875rem;
+      padding: 0.375rem 0.625rem;
+      font-size: 0.75rem;
       font-weight: 600;
-      border-radius: var(--radius-md);
-      transition: all var(--transition-fast);
+      color: var(--text-3);
+      border-radius: calc(var(--radius) - 2px);
+      cursor: pointer;
+      transition: all var(--transition);
     }
 
-    .tab-btn:hover {
-      background: white;
-      color: var(--text);
-      transform: none;
-      box-shadow: none;
-    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active { background: var(--surface); color: var(--accent); box-shadow: var(--shadow); }
 
-    .tab-btn.active {
-      background: white;
-      color: var(--accent);
-      box-shadow: var(--shadow-xs);
-    }
+    .modal-body { padding: 1rem; }
 
-    .tab-content {
-      display: none;
-      padding: var(--space-xl);
-    }
-
-    .tab-content.active {
-      display: block;
-      animation: fadeIn var(--transition-fast);
-    }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
 
     .json-viewer, .diff-viewer {
-      background: hsl(var(--hue-primary) 20% 97%);
-      padding: var(--space-lg);
-      border-radius: var(--radius-lg);
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
+      background: var(--bg);
+      padding: 0.75rem;
+      border-radius: var(--radius);
+      font-family: var(--mono);
+      font-size: 0.75rem;
       line-height: 1.6;
-      tab-size: 2;
       white-space: pre-wrap;
       overflow-x: auto;
       border: 1px solid var(--border);
     }
 
     .diff-item {
-      padding: var(--space-md);
-      margin: var(--space-sm) 0;
-      border-radius: var(--radius-md);
-      overflow: hidden;
+      padding: 0.5rem;
+      margin: 0.25rem 0;
+      border-radius: var(--radius);
       border: 1px solid transparent;
     }
 
-    .diff-added {
-      background: var(--success-light);
-      border-left: 3px solid var(--success);
-      border-color: var(--success-border);
-    }
+    .diff-added   { background: var(--green-soft); border-left: 2px solid var(--green);  border-color: var(--green-border); }
+    .diff-removed { background: var(--red-soft);   border-left: 2px solid var(--red);    border-color: var(--red-border); }
+    .diff-changed { background: var(--amber-soft); border-left: 2px solid var(--amber);  border-color: var(--amber-border); }
 
-    .diff-removed {
-      background: var(--error-light);
-      border-left: 3px solid var(--error);
-      border-color: var(--error-border);
-    }
-
-    .diff-changed {
-      background: var(--warning-light);
-      border-left: 3px solid var(--warning);
-      border-color: var(--warning-border);
-    }
-
-    .diff-path {
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: var(--space-sm);
-      font-size: 0.875rem;
-    }
-
-    .diff-value {
-      color: var(--text-light);
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
-      line-height: 1.5;
-    }
-
-    .export-info {
-      color: var(--text-light);
-      font-size: 0.875rem;
-      margin-bottom: var(--space-md);
-    }
+    .diff-path { font-weight: 600; font-size: 0.75rem; margin-bottom: 0.25rem; }
+    .diff-value { font-family: var(--mono); font-size: 0.75rem; color: var(--text-2); }
 
     .export-preview {
-      background: hsl(var(--hue-primary) 20% 97%);
-      padding: var(--space-lg);
-      border-radius: var(--radius-lg);
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
+      background: var(--bg);
+      padding: 0.75rem;
+      border-radius: var(--radius);
+      font-family: var(--mono);
+      font-size: 0.75rem;
       line-height: 1.6;
       white-space: pre-wrap;
       overflow-x: auto;
       border: 1px solid var(--border);
     }
 
-    .modal-body {
-      padding: var(--space-xl);
-    }
-
-    .modal-actions {
+    /* ── Data management ── */
+    .data-actions {
       display: flex;
-      gap: var(--space-sm);
-      margin-left: auto;
+      gap: 0.375rem;
+      flex-wrap: wrap;
     }
 
-    /* Step indicators and progress */
-    .step-indicator {
-      display: inline-flex;
+    /* ── Helper ── */
+    .callout {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.75rem;
+      border-radius: var(--radius);
+      font-size: 0.8125rem;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      margin-bottom: 0.75rem;
+    }
+
+    .callout .icon { width: 1rem; height: 1rem; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+
+    .callout-body { flex: 1; }
+    .callout-title { font-weight: 600; margin-bottom: 0.125rem; }
+    .callout-text { color: var(--text-2); font-size: 0.8125rem; line-height: 1.6; }
+
+    .callout ol {
+      margin: 0.25rem 0 0 1.25rem;
+      font-size: 0.8125rem;
+      color: var(--text-2);
+    }
+
+    .callout ol li { margin-bottom: 0.125rem; }
+    .callout a { color: var(--accent); }
+
+    /* ── Scroll to top FAB ── */
+    .fab {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      border: none;
+      box-shadow: var(--shadow-lg);
+      display: none;
       align-items: center;
       justify-content: center;
-      width: 2rem;
-      height: 2rem;
-      border-radius: var(--radius-full);
-      background: var(--accent-light);
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 0.875rem;
-      margin-right: var(--space-md);
-      flex-shrink: 0;
-      border: 2px solid var(--accent-border);
+      z-index: 50;
+      cursor: pointer;
+      transition: all var(--transition);
     }
 
-    .step-indicator.completed {
-      background: var(--success);
-      color: white;
-      border-color: var(--success);
-    }
+    .fab.visible { display: flex; }
+    .fab:hover { transform: scale(1.08); }
+    .fab .icon { width: 1.25rem; height: 1.25rem; }
 
-    .step-header {
-      display: flex;
-      align-items: center;
-    }
-
-    /* Empty states */
-    .empty-state {
+    /* ── Footer ── */
+    footer {
       text-align: center;
-      padding: var(--space-3xl) var(--space-xl);
-      color: var(--text-light);
-    }
-
-    .empty-state-icon {
-      width: 4rem;
-      height: 4rem;
-      margin: 0 auto var(--space-lg);
-      opacity: 0.3;
-    }
-
-    .empty-state-title {
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: var(--space-sm);
-    }
-
-    .empty-state-description {
-      font-size: 0.9375rem;
-      line-height: var(--line-height-relaxed);
-      max-width: 28rem;
-      margin: 0 auto var(--space-xl);
-    }
-
-    /* Guided flow helpers */
-    .helper-callout {
-      background: linear-gradient(135deg, var(--accent-light), hsl(var(--hue-primary) 90% 98%));
-      border: 1.5px solid var(--accent-border);
-      border-radius: var(--radius-lg);
-      padding: var(--space-lg);
-      margin-bottom: var(--space-xl);
-      display: flex;
-      gap: var(--space-md);
-      align-items: flex-start;
-    }
-
-    .helper-callout-icon {
-      width: 1.5rem;
-      height: 1.5rem;
-      color: var(--accent);
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .helper-callout-content {
-      flex: 1;
-    }
-
-    .helper-callout-title {
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: var(--space-xs);
-      font-size: 0.9375rem;
-    }
-
-    .helper-callout-text {
-      color: var(--text-light);
-      font-size: 0.875rem;
-      line-height: var(--line-height-relaxed);
-    }
-
-    .helper-callout ol {
-      margin: var(--space-sm) 0 0 var(--space-lg);
-      color: var(--text-light);
-      font-size: 0.875rem;
-      line-height: var(--line-height-relaxed);
-    }
-
-    .helper-callout ol li {
-      margin-bottom: var(--space-xs);
-    }
-
-    /* Case summary cards */
-    .case-summary-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: var(--space-lg);
-      margin-bottom: var(--space-2xl);
-    }
-
-    .case-card {
-      background: white;
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: var(--space-lg);
-      transition: all var(--transition-normal);
-      box-shadow: var(--shadow-xs);
-    }
-
-    .case-card:hover {
-      border-color: var(--accent-border);
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
-    }
-
-    .case-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: var(--space-md);
-    }
-
-    .case-card-receipt {
-      font-family: var(--font-mono);
-      font-size: 0.875rem;
-      font-weight: 700;
-      color: var(--text);
-    }
-
-    .case-card-form {
+      padding: 2rem 1rem 1.5rem;
       font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--text-light);
-      background: var(--bg);
-      padding: var(--space-xs) var(--space-sm);
-      border-radius: var(--radius-full);
-    }
-
-    .case-card-status {
-      font-size: 0.875rem;
-      color: var(--text-light);
-      margin-bottom: var(--space-sm);
-      line-height: var(--line-height-relaxed);
-    }
-
-    .case-card-meta {
-      display: flex;
-      gap: var(--space-lg);
-      font-size: 0.8125rem;
-      color: var(--muted);
-      padding-top: var(--space-md);
+      color: var(--text-3);
       border-top: 1px solid var(--border);
+      margin-top: 2rem;
     }
 
-    .case-card-meta-item {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-2xs);
-    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    footer p + p { margin-top: 0.375rem; }
 
-    .case-card-meta-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-    }
-
-    .case-card-meta-value {
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-xs);
-      padding: var(--space-xs) var(--space-md);
-      border-radius: var(--radius-full);
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .status-badge.active {
-      background: var(--warning-light);
-      color: var(--warning);
-      border: 1px solid var(--warning-border);
-    }
-
-    .status-badge.completed {
-      background: var(--success-light);
-      color: var(--success);
-      border: 1px solid var(--success-border);
-    }
-
-    .timeline {
-      position: relative;
-      border-left: 3px solid var(--accent-border);
-      margin: var(--space-lg) 0 0 var(--space-md);
-      padding-left: var(--space-2xl);
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      top: -10px;
-      left: -10px;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, hsl(var(--hue-primary) 95% 55%), hsl(var(--hue-primary) 85% 48%));
-      border: 3px solid white;
-      box-shadow: var(--shadow-md);
-      z-index: 2;
-    }
-
-    .timeline::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: -1.5px;
-      width: 3px;
-      height: 40px;
-      background: linear-gradient(to bottom, var(--accent-border), transparent);
-    }
-
-    .tgroup {
-      margin-bottom: var(--space-2xl);
-      position: relative;
-    }
-
-    .tgroup::before {
-      content: '';
-      position: absolute;
-      top: 14px;
-      left: calc(-1 * var(--space-2xl) - 6.5px);
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: white;
-      border: 3px solid var(--accent);
-      box-shadow: var(--shadow-sm);
-      z-index: 1;
-    }
-
-    .tdate {
-      font-weight: 700;
-      margin-bottom: var(--space-lg);
-      color: var(--text);
-      font-size: 0.9375rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      display: flex;
-      align-items: center;
-      gap: var(--space-sm);
-    }
-
-    .tdate::after {
-      content: '';
-      flex: 1;
-      height: 2px;
-      background: linear-gradient(to right, var(--border), transparent);
-    }
-
-    .titem {
-      margin: var(--space-sm) 0;
-      padding: var(--space-lg);
-      background: white;
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-lg);
-      font-size: 0.9375rem;
-      transition: all var(--transition-normal);
-      position: relative;
-      box-shadow: var(--shadow-xs);
-    }
-
-    .titem::before {
-      content: '';
-      position: absolute;
-      left: -25px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--border);
-      transition: all var(--transition-normal);
-    }
-
-    .titem:hover {
-      border-color: var(--accent);
-      box-shadow: var(--shadow-md);
-      transform: translateX(4px);
-    }
-
-    .titem:hover::before {
-      background: var(--accent);
-      width: 8px;
-      height: 8px;
-      left: -26px;
-    }
-
-    .titem-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: var(--space-lg);
-    }
-
-    .titem-content > div:first-child {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .titem-time {
-      font-size: 0.8125rem;
-      color: var(--muted);
-      font-weight: 600;
-      margin-bottom: var(--space-xs);
-    }
-
-    .view-json {
-      padding: var(--space-sm) var(--space-lg);
-      font-size: 0.8125rem;
-      font-weight: 600;
-      color: var(--text-light);
-      background: var(--bg);
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-full);
-      white-space: nowrap;
-      flex-shrink: 0;
-      transition: all var(--transition-normal);
-    }
-
-    .view-json:hover {
-      color: var(--accent);
-      border-color: var(--accent);
-      background: var(--accent-light);
-      transform: translateY(-1px);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .view-json .icon {
-      width: 1em;
-      height: 1em;
-      margin: 0;
-    }
-
-    .titem-main {
-      display: flex;
-      align-items: center;
-      gap: var(--space-sm);
-      flex-wrap: wrap;
-      margin-bottom: var(--space-xs);
-    }
-
-    .titem-label {
-      font-weight: 500;
-      color: var(--text);
-      line-height: var(--line-height-relaxed);
-    }
-
-    .flag {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-xs);
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: var(--space-xs) var(--space-sm);
-      border-radius: var(--radius-full);
-      white-space: nowrap;
-      border: 1px solid transparent;
-    }
-
-    .flag.system {
-      color: var(--warning);
-      background: var(--warning-light);
-      border-color: var(--warning-border);
-    }
-
-    .flag.officer {
-      color: var(--success);
-      background: var(--success-light);
-      border-color: var(--success-border);
-    }
-
-    .flag.completed {
-      color: var(--accent);
-      background: var(--accent-light);
-      border-color: var(--accent-border);
-    }
-
-    .insight {
-      margin-top: var(--space-sm);
-      font-size: 0.875rem;
-      padding: var(--space-md);
-      border-radius: var(--radius-md);
-      line-height: var(--line-height-relaxed);
-    }
-
-    .insight.info {
-      color: var(--text-light);
-      background: hsl(var(--hue-primary) 20% 97%);
-      border-left: 3px solid var(--accent-border);
-    }
-
-    .insight.success {
-      color: var(--success);
-      background: var(--success-light);
-      border-left: 3px solid var(--success);
-      font-weight: 500;
-    }
-
-    .muted {
-      color: var(--muted);
-      font-size: 0.875rem;
-    }
-
-    /* Additional modern styles */
     .sr-only {
       position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
       overflow: hidden;
-      clip: rect(0, 0, 0, 0);
+      clip: rect(0,0,0,0);
       white-space: nowrap;
       border: 0;
     }
 
-    .button-group {
-      display: flex;
-      gap: var(--space-sm);
-      flex-wrap: wrap;
-    }
-
-    .icon {
-      width: 1.25em;
-      height: 1.25em;
-      flex-shrink: 0;
-    }
-
-    .privacy-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-sm);
-      padding: var(--space-sm) var(--space-lg);
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-      color: white;
-      border-radius: var(--radius-full);
-      font-size: 0.875rem;
-      font-weight: 600;
-      border: 1.5px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .privacy-badge .icon {
-      width: 1.125em;
-      height: 1.125em;
-      color: white;
-    }
-
-    .github-link {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-sm);
-      padding: var(--space-sm) var(--space-lg);
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      color: white;
-      text-decoration: none;
-      border-radius: var(--radius-full);
-      font-size: 0.875rem;
-      font-weight: 600;
-      border: 1.5px solid rgba(255, 255, 255, 0.15);
-      transition: all var(--transition-normal);
-    }
-
-    .github-link:hover {
-      background: rgba(255, 255, 255, 0.2);
-      border-color: rgba(255, 255, 255, 0.3);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    }
-
-    .github-link:active {
-      transform: translateY(0);
-    }
-
-    .github-icon {
-      width: 1.125em;
-      height: 1.125em;
-    }
-
-    /* Floating Action Button */
-    .fab {
-      position: fixed;
-      bottom: var(--space-2xl);
-      right: var(--space-2xl);
-      width: 3.5rem;
-      height: 3.5rem;
-      border-radius: var(--radius-full);
-      background: linear-gradient(135deg, hsl(var(--hue-primary) 95% 55%) 0%, hsl(var(--hue-primary) 85% 48%) 100%);
-      color: white;
-      border: none;
-      box-shadow: var(--shadow-lg);
-      cursor: pointer;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      transition: all var(--transition-normal);
-      z-index: 50;
-      margin: 0;
-      padding: 0;
-    }
-
-    .fab.visible {
-      display: flex;
-    }
-
-    .fab:hover {
-      transform: translateY(-4px) scale(1.05);
-      box-shadow: var(--shadow-xl);
-    }
-
-    .fab:active {
-      transform: translateY(-2px) scale(1.02);
-    }
-
-    .fab .icon {
-      width: 1.5rem;
-      height: 1.5rem;
-      margin: 0;
-    }
-
-    /* Quick stats bar */
-    .quick-stats {
-      display: flex;
-      gap: var(--space-lg);
-      padding: var(--space-lg) var(--space-xl);
-      background: linear-gradient(to bottom, hsl(var(--hue-primary) 20% 99%), white);
-      border-bottom: 1px solid var(--border);
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .quick-stats-items {
-      display: flex;
-      gap: var(--space-2xl);
-      flex-wrap: wrap;
-    }
-
-    .quick-stat {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-2xs);
-    }
-
-    .quick-stat-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--muted);
-    }
-
-    .quick-stat-value {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--text);
-      line-height: 1;
-    }
-
-    .quick-stats-actions {
-      display: flex;
-      gap: var(--space-sm);
-    }
-
-    .btn-compact {
-      padding: var(--space-sm) var(--space-lg);
-      font-size: 0.875rem;
-    }
-
-    /* Add case modal */
-    #addCaseModal .modal-content {
-      max-width: 36rem;
-    }
-
-    .add-case-form {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-lg);
-    }
+    /* ── Add case modal ── */
+    #addCaseModal .modal-box { max-width: 28rem; }
 
     .form-actions {
       display: flex;
-      gap: var(--space-sm);
+      gap: 0.375rem;
       justify-content: flex-end;
-      padding-top: var(--space-md);
+      padding-top: 0.75rem;
       border-top: 1px solid var(--border);
     }
 
-    /* Focus styles */
-    :focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-    }
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      header { flex-direction: column; align-items: flex-start; }
+      .header-right { width: 100%; justify-content: flex-start; }
+      main { padding: 1rem 0.75rem 2rem; }
 
-    /* Invalid input styles */
-    input:invalid {
-      border-color: hsl(0, 90%, 70%);
-    }
+      .input-row { flex-direction: column; }
+      .input-row button { width: 100%; }
 
-    input:invalid:focus {
-      box-shadow: 0 0 0 3px hsl(0, 90%, 50% / 0.2);
-    }
+      .titem-row { flex-direction: column; }
 
-    @media (max-width: 768px) {
-      :root {
-        --space-lg: 0.875rem;
-        --space-xl: 1.25rem;
-        --space-2xl: 1.5rem;
-        --space-3xl: 2rem;
-      }
+      .case-grid { grid-template-columns: 1fr; padding: 0.75rem; }
 
-      header {
-        padding: var(--space-xl) var(--space-md);
-      }
+      .stats-row { flex-direction: column; gap: 0.5rem; }
+      .stats-items { width: 100%; }
 
-      header h1 {
-        font-size: 1.5rem;
-      }
+      .modal { padding: 0.5rem; }
+      .modal-box { margin: 0.5rem auto; }
+      .modal-head { flex-wrap: wrap; }
+      .modal-tabs { width: 100%; }
 
-      main {
-        padding: var(--space-xl) var(--space-md) var(--space-2xl);
-      }
-
-      .card {
-        border-radius: var(--radius-lg);
-        margin-bottom: var(--space-xl);
-      }
-
-      .card-header {
-        padding: var(--space-lg);
-        flex-wrap: wrap;
-      }
-
-      .card > *:not(.card-header):not(.card-body):not(.collapsed-content) {
-        padding: var(--space-lg);
-      }
-
-      .card.collapsible:not(.collapsed) .card-body {
-        padding: var(--space-lg);
-      }
-
-      h2 {
-        font-size: 1.25rem;
-      }
-
-      h3 {
-        font-size: 1.125rem;
-      }
-
-      .step-indicator {
-        width: 1.75rem;
-        height: 1.75rem;
-        margin-right: var(--space-sm);
-        font-size: 0.8125rem;
-      }
-
-      .button-group {
-        flex-direction: column;
-      }
-
-      .button-group button {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: var(--space-sm);
-      }
-
-      button {
-        padding: var(--space-md) var(--space-lg);
-      }
-
-      .titem {
-        padding: var(--space-md);
-      }
-
-      .titem-content {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .view-json {
-        width: 100%;
-        justify-content: center;
-        margin-top: var(--space-md);
-      }
-
-      .titem-main {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .timeline {
-        padding-left: var(--space-xl);
-        margin-left: var(--space-sm);
-      }
-
-      .modal {
-        padding: var(--space-md);
-      }
-
-      .modal-content {
-        margin: var(--space-md) auto;
-        border-radius: var(--radius-xl);
-      }
-
-      .modal-header {
-        padding: var(--space-lg);
-        flex-wrap: wrap;
-      }
-
-      .modal-tabs {
-        order: 3;
-        width: 100%;
-        margin-top: var(--space-sm);
-      }
-
-      .tab-content {
-        padding: var(--space-lg);
-      }
-
-      .case-summary-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .helper-callout {
-        flex-direction: column;
-      }
-
-      .privacy-badge {
-        font-size: 0.8125rem;
-      }
-
-      .github-link {
-        font-size: 0.8125rem;
-        padding: var(--space-sm) var(--space-md);
-      }
-
-      .quick-stats {
-        padding: var(--space-md);
-        flex-direction: column;
-        gap: var(--space-md);
-      }
-
-      .quick-stats-items {
-        gap: var(--space-lg);
-        width: 100%;
-      }
-
-      .quick-stats-actions {
-        width: 100%;
-        flex-direction: column;
-      }
-
-      .quick-stats-actions button {
-        width: 100%;
-      }
-
-      .fab {
-        bottom: var(--space-xl);
-        right: var(--space-lg);
-        width: 3rem;
-        height: 3rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.375rem;
-      }
-
-      header p {
-        font-size: 0.875rem;
-      }
-
-      .chip-container {
-        padding: var(--space-sm);
-      }
-
-      .chip {
-        font-size: 0.8125rem;
-        padding: var(--space-xs) var(--space-md) var(--space-xs) var(--space-sm);
-      }
-
-      .tdate {
-        font-size: 0.8125rem;
-      }
-
-      .flag {
-        font-size: 0.6875rem;
-        padding: var(--space-2xs) var(--space-sm);
-      }
-
-      .footer-content {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Footer styles */
-    footer {
-      background: linear-gradient(to bottom, var(--card), hsl(var(--hue-primary) 20% 98%));
-      border-top: 2px solid var(--border);
-      padding: var(--space-3xl) var(--space-lg) var(--space-2xl);
-      margin-top: var(--space-3xl);
-    }
-
-    .footer-content {
-      max-width: 68rem;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: var(--space-2xl);
-    }
-
-    .footer-section h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: var(--space-md);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .footer-section p, .footer-section ul {
-      font-size: 0.875rem;
-      line-height: var(--line-height-relaxed);
-      color: var(--text-light);
-    }
-
-    .footer-section ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .footer-section ul li {
-      margin-bottom: var(--space-sm);
-    }
-
-    .footer-section a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: color var(--transition-fast);
-    }
-
-    .footer-section a:hover {
-      color: var(--accent-hover);
-      text-decoration: underline;
-    }
-
-    .footer-bottom {
-      max-width: 68rem;
-      margin: var(--space-2xl) auto 0;
-      padding-top: var(--space-xl);
-      border-top: 1px solid var(--border);
-      text-align: center;
-      font-size: 0.8125rem;
-      color: var(--muted);
-    }
-
-    .footer-keywords {
-      font-size: 0.75rem;
-      color: var(--muted);
-      line-height: var(--line-height-relaxed);
-      margin-top: var(--space-md);
-      opacity: 0.6;
-    }
-
-    .sr-only-seo {
-      position: absolute;
-      left: -10000px;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
+      .privacy-bar { flex-direction: column; align-items: flex-start; gap: 0.375rem; }
     }
   </style>
 </head>
-<body itemscope itemtype="https://schema.org/WebApplication">
+<body>
+
 <header>
-  <h1 itemprop="name">USCIS Case Tracker - Free Privacy-Focused Immigration Status Tracker</h1>
-  <p itemprop="description">100% client-side • Zero data sent to servers • All data stays in your browser</p>
-  <div class="privacy-badge" role="status" aria-label="Privacy and security badge">
-    <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" role="img" alt="Security shield icon">
-      <path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"/>
-    </svg>
-    Private &amp; Secure
+  <div class="header-left">
+    <h1>📋 USCIS Case Tracker</h1>
   </div>
-  <a href="https://github.com/humanstack/uscis-case-tracker" class="github-link" target="_blank" rel="noopener noreferrer" aria-label="View USCIS Case Tracker source code on GitHub" title="Open source USCIS immigration case tracker">
-    <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" role="img" alt="GitHub logo">
-      <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
-    </svg>
-    View on GitHub
-  </a>
+  <div class="header-right">
+    <span class="badge badge-privacy">
+      <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"/>
+      </svg>
+      100% Local · No Servers
+    </span>
+    <a href="https://github.com/humanstack/uscis-case-tracker" class="link-github" target="_blank" rel="noopener noreferrer" aria-label="Source code on GitHub">
+      <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+      </svg>
+      GitHub
+    </a>
+  </div>
 </header>
 
 <main>
+  <!-- Privacy controls bar -->
+  <div class="privacy-bar">
+    <div class="privacy-bar-left">
+      <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+      </svg>
+      All data stored in your browser only — never sent anywhere
+    </div>
+    <label class="toggle-wrap" id="maskToggle">
+      <span>Mask receipts</span>
+      <input type="checkbox" id="maskCheckbox" checked/>
+      <span class="toggle-track"></span>
+    </label>
+  </div>
+
+  <!-- Getting started -->
   <section id="aboutSection" class="card collapsible" aria-labelledby="about-title">
-    <div class="card-header" onclick="toggleCollapse('aboutSection')">
+    <div class="card-head" onclick="toggleCollapse('aboutSection')">
       <h2 id="about-title">Getting Started</h2>
-      <svg class="collapse-icon icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+      <svg class="collapse-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
       </svg>
     </div>
-    <div class="collapsed-content">
-      <a href="https://myaccount.uscis.gov/sign-in" target="_blank" rel="noopener" class="quick-link">
+    <div class="collapsed-quick">
+      <a href="https://myaccount.uscis.gov/sign-in" target="_blank" rel="noopener" class="pill">
         <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
           <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
           <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
@@ -1768,78 +1033,59 @@
       </a>
     </div>
     <div class="card-body">
-      <div class="helper-callout">
-        <svg class="helper-callout-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+      <div class="callout">
+        <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
           <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
         </svg>
-        <div class="helper-callout-content">
-          <div class="helper-callout-title">100% Privacy-Focused Tracker</div>
-          <div class="helper-callout-text">
-            Your data never leaves your browser. All case information is stored locally and no data is sent to any server.
-          </div>
+        <div class="callout-body">
+          <div class="callout-title">How it works</div>
+          <ol>
+            <li>Log in to <a href="https://myaccount.uscis.gov/sign-in" target="_blank" rel="noopener">myaccount.uscis.gov</a> in another tab</li>
+            <li>Add your receipt numbers below (e.g., IOE1234567890)</li>
+            <li>Click "Open API tabs" to open the USCIS JSON endpoints</li>
+            <li>Copy the JSON from each tab and paste it into Step 2</li>
+            <li>Your timeline updates with each snapshot</li>
+          </ol>
         </div>
       </div>
-      <ol>
-        <li>First, log in to <a href="https://myaccount.uscis.gov/sign-in" target="_blank" rel="noopener">myaccount.uscis.gov</a> in a separate tab</li>
-        <li>Add your USCIS receipt numbers below (e.g., IOE1234567890)</li>
-        <li>Click "Open API tabs" to open official USCIS JSON endpoints</li>
-        <li>Copy the raw JSON from each tab and paste it into Step 2</li>
-        <li>Your timeline will update automatically with each snapshot</li>
-      </ol>
     </div>
   </section>
 
+  <!-- Step 1: Receipts -->
   <section id="receiptsSection" class="card collapsible" aria-labelledby="receipts-title">
-    <div class="card-header" onclick="toggleCollapse('receiptsSection')">
-      <div class="step-header">
-        <span class="step-indicator" id="step1Indicator">1</span>
-        <h2 id="receipts-title">Add Your Case Numbers</h2>
-      </div>
-      <svg class="collapse-icon icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+    <div class="card-head" onclick="toggleCollapse('receiptsSection')">
+      <h2 id="receipts-title">
+        <span class="step-num" id="step1Indicator">1</span>
+        Add Receipt Numbers
+      </h2>
+      <svg class="collapse-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
       </svg>
     </div>
-    <div class="collapsed-content">
-      <button onclick="openAllApiTabs()" class="quick-link" style="border: none; cursor: pointer;">
+    <div class="collapsed-quick">
+      <button onclick="event.stopPropagation();openAllApiTabs()" class="pill" style="border:none;cursor:pointer">
         <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
           <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
           <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
         </svg>
         Open All API tabs
       </button>
-      <div id="receiptChipsCollapsed" style="display: flex; flex-wrap: wrap; gap: var(--space-sm);" role="list" aria-label="Receipt numbers with individual API links"></div>
+      <div id="receiptChipsCollapsed" style="display:flex;flex-wrap:wrap;gap:0.375rem" role="list"></div>
     </div>
     <div class="card-body">
-      <div class="helper-callout" id="step1Helper">
-        <svg class="helper-callout-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
-        </svg>
-        <div class="helper-callout-content">
-          <div class="helper-callout-title">Start by adding your receipt number(s)</div>
-          <div class="helper-callout-text">
-            Enter your USCIS receipt number in the format: 3 letters + 10 digits (e.g., IOE1234567890). You can track multiple cases at once.
-          </div>
-        </div>
-      </div>
-      <div class="input-group">
-        <label for="receiptInput" class="sr-only">Receipt Number</label>
-        <input
-          id="receiptInput"
-          type="text"
-          placeholder="Enter receipt number e.g. IOE1234567890"
-          pattern="[A-Z]{3}[0-9]{10}"
-          aria-describedby="receipt-hint"
-        />
-        <span id="receipt-hint" class="hint">Format: 3 letters followed by 10 numbers (e.g., IOE1234567890)</span>
-      </div>
-      <div class="button-group">
-        <button class="primary" id="addReceiptBtn" aria-label="Add receipt number">
+      <div class="input-row" style="margin-bottom:0.5rem">
+        <input id="receiptInput" type="text" placeholder="e.g. IOE1234567890" pattern="[A-Z]{3}[0-9]{10}" aria-label="Receipt number"/>
+        <button class="primary" id="addReceiptBtn">
           <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"/>
           </svg>
-          Add Receipt
+          Add
         </button>
-        <button id="openTabsBtn" aria-label="Open API tabs for all receipt numbers" disabled>
+      </div>
+      <span class="hint">3 letters + 10 digits (e.g., IOE1234567890)</span>
+      <div id="receiptChips" class="chip-list" style="margin-top:0.5rem" role="list"></div>
+      <div style="margin-top:0.75rem">
+        <button id="openTabsBtn" disabled>
           <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
             <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
@@ -1847,719 +1093,518 @@
           Open API tabs
         </button>
       </div>
-      <div id="receiptChips" class="chip-container" role="list" aria-label="Added receipt numbers"></div>
     </div>
   </section>
 
+  <!-- Step 2: Paste JSON -->
   <section class="card" aria-labelledby="json-title" id="step2Section">
-    <div class="step-header">
-      <span class="step-indicator" id="step2Indicator">2</span>
-      <h2 id="json-title">Get Case Data from USCIS</h2>
+    <div class="card-head">
+      <h2 id="json-title">
+        <span class="step-num" id="step2Indicator">2</span>
+        Paste Case Data
+      </h2>
     </div>
-    <div class="helper-callout" id="step2Helper">
-      <svg class="helper-callout-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
-      </svg>
-      <div class="helper-callout-content">
-        <div class="helper-callout-title">How to get your case data</div>
-        <ol>
-          <li>Make sure you're logged into <a href="https://myaccount.uscis.gov/sign-in" target="_blank" rel="noopener">myaccount.uscis.gov</a></li>
-          <li>Click "Open API tabs" above to open the official USCIS JSON endpoints</li>
-          <li>Copy all the JSON text from each tab (it looks like code)</li>
-          <li>Paste it into the box below and click "Save Snapshot"</li>
-        </ol>
-      </div>
-    </div>
-    <div class="input-group">
-      <label for="jsonText" class="sr-only">USCIS JSON Response</label>
-      <textarea
-        id="jsonText"
-        placeholder="Paste the raw JSON from USCIS API here...
-
-After clicking 'Open API tabs', you'll see a page with JSON data. Copy everything from that page and paste it here."
-        aria-describedby="json-hint"
-        rows="8"
-      ></textarea>
-      <span id="json-hint" class="hint">Paste the entire JSON response from the USCIS API tab</span>
-    </div>
-    <button class="primary" id="saveJsonBtn">
-      <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <path d="M7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V6a1 1 0 10-2 0v5.586l-1.293-1.293z"/>
-        <path d="M3 17a2 2 0 002 2h10a2 2 0 002-2V7.414A2 2 0 0015.414 6L13 3.586A2 2 0 0011.586 3H5a2 2 0 00-2 2v12z"/>
-      </svg>
-      Save Snapshot
-    </button>
-  </section>
-
-  <section class="card" aria-labelledby="timeline-title">
-    <div class="card-header">
-      <div class="step-header">
-        <span class="step-indicator" id="step3Indicator">3</span>
-        <h2 id="timeline-title">Your Case Timeline</h2>
-      </div>
-      <button onclick="exportTimeline()" class="export-btn" aria-label="Export timeline for Reddit" id="exportBtn" style="display: none;">
+    <div class="card-body">
+      <div class="callout" id="step2Helper">
         <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"/>
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
         </svg>
-        Export for Reddit
+        <div class="callout-body">
+          <div class="callout-text">
+            1. Log in to <a href="https://myaccount.uscis.gov/sign-in" target="_blank" rel="noopener">USCIS</a> →
+            2. Click "Open API tabs" above →
+            3. Copy the JSON →
+            4. Paste below
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <textarea id="jsonText" placeholder="Paste raw JSON from the USCIS API tab here…" rows="6" aria-label="USCIS JSON response"></textarea>
+      </div>
+      <button class="primary" id="saveJsonBtn">
+        <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V6a1 1 0 10-2 0v5.586l-1.293-1.293z"/>
+          <path d="M3 17a2 2 0 002 2h10a2 2 0 002-2V7.414A2 2 0 0015.414 6L13 3.586A2 2 0 0011.586 3H5a2 2 0 00-2 2v12z"/>
+        </svg>
+        Save Snapshot
       </button>
     </div>
-    <div id="quickStatsBar" class="quick-stats" style="display: none;">
-      <div class="quick-stats-items">
-        <div class="quick-stat">
-          <span class="quick-stat-label">Total Cases</span>
-          <span class="quick-stat-value" id="statTotalCases">0</span>
-        </div>
-        <div class="quick-stat">
-          <span class="quick-stat-label">Completed</span>
-          <span class="quick-stat-value" id="statCompleted">0</span>
-        </div>
-        <div class="quick-stat">
-          <span class="quick-stat-label">In Progress</span>
-          <span class="quick-stat-value" id="statInProgress">0</span>
-        </div>
-        <div class="quick-stat">
-          <span class="quick-stat-label">Total Updates</span>
-          <span class="quick-stat-value" id="statTotalUpdates">0</span>
-        </div>
-      </div>
-      <div class="quick-stats-actions">
-        <button onclick="openAddCaseModal()" class="btn-compact">
-          <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"/>
-          </svg>
-          Add Case
-        </button>
-        <button onclick="clearAllData()" class="btn-compact" style="border-color: var(--error-border); color: var(--error);">
-          <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
-          </svg>
-          Clear Data
-        </button>
+  </section>
+
+  <!-- Step 3: Timeline -->
+  <section class="card" aria-labelledby="timeline-title">
+    <div class="card-head">
+      <h2 id="timeline-title">
+        <span class="step-num" id="step3Indicator">3</span>
+        Timeline
+      </h2>
+      <div class="card-head-actions">
+        <button onclick="exportTimeline()" class="sm" id="exportBtn" style="display:none">Export for Reddit</button>
       </div>
     </div>
-    <div id="caseSummary" class="case-summary-grid" style="display: none; padding: var(--space-xl);"></div>
+    <div id="quickStatsBar" class="stats-row" style="display:none">
+      <div class="stats-items">
+        <div class="stat">
+          <span class="stat-label">Cases</span>
+          <span class="stat-value" id="statTotalCases">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Completed</span>
+          <span class="stat-value" id="statCompleted">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">In Progress</span>
+          <span class="stat-value" id="statInProgress">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Snapshots</span>
+          <span class="stat-value" id="statTotalUpdates">0</span>
+        </div>
+      </div>
+      <div class="data-actions">
+        <button onclick="openAddCaseModal()" class="sm">+ Add Case</button>
+        <button onclick="exportData()" class="sm">↓ Backup</button>
+        <button onclick="importData()" class="sm">↑ Restore</button>
+        <button onclick="clearAllData()" class="sm danger">Clear All</button>
+      </div>
+    </div>
+    <div id="caseSummary" class="case-grid" style="display:none"></div>
     <div id="timelineContainer">
-      <div id="timeline" class="timeline" role="feed" aria-label="Case updates timeline"></div>
+      <div id="timeline" class="timeline" style="margin:1rem" role="feed" aria-label="Case updates timeline"></div>
     </div>
   </section>
 </main>
 
+<!-- JSON viewer modal -->
 <div id="jsonModal" class="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
-  <div class="modal-content">
-    <div class="modal-header">
+  <div class="modal-box">
+    <div class="modal-head">
       <h3 id="modal-title">Case Data</h3>
       <div class="modal-tabs">
-        <button onclick="switchTab('full')" class="tab-btn active" id="fullTab">Full JSON</button>
-        <button onclick="switchTab('diff')" class="tab-btn" id="diffTab">View Changes</button>
+        <button onclick="switchTab('full')" class="tab-btn active" id="fullTab">JSON</button>
+        <button onclick="switchTab('diff')" class="tab-btn" id="diffTab">Changes</button>
       </div>
-      <button class="modal-close" onclick="closeModal()" aria-label="Close modal">
-        <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
-        </svg>
+      <button class="ghost" onclick="closeModal()" aria-label="Close">
+        <svg class="icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
       </button>
     </div>
-    <div id="fullView" class="tab-content active">
+    <div id="fullView" class="tab-content active" style="padding:1rem">
       <pre id="jsonViewer" class="json-viewer"></pre>
     </div>
-    <div id="diffView" class="tab-content">
+    <div id="diffView" class="tab-content" style="padding:1rem">
       <div id="diffViewer" class="diff-viewer"></div>
     </div>
   </div>
 </div>
 
+<!-- Export modal -->
 <div id="exportModal" class="modal" role="dialog" aria-labelledby="export-title" aria-modal="true">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h3 id="export-title">Export Timeline for Reddit</h3>
-      <div class="modal-actions">
-        <button onclick="copyExport()" class="primary" id="copyBtn">
-          <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"/>
-            <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"/>
-          </svg>
-          Copy to Clipboard
-        </button>
-        <button class="modal-close" onclick="closeExportModal()" aria-label="Close modal">
-          <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
-          </svg>
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3 id="export-title">Export for Reddit</h3>
+      <div style="display:flex;gap:0.375rem;margin-left:auto">
+        <button onclick="copyExport()" class="primary sm" id="copyBtn">Copy</button>
+        <button class="ghost" onclick="closeExportModal()" aria-label="Close">
+          <svg class="icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
         </button>
       </div>
     </div>
     <div class="modal-body">
-      <p class="export-info">This is how your timeline will appear on Reddit. Receipt numbers are masked for privacy.</p>
+      <p style="font-size:0.8125rem;color:var(--text-2);margin-bottom:0.75rem">Receipt numbers are masked for privacy.</p>
       <pre id="exportPreview" class="export-preview"></pre>
     </div>
   </div>
 </div>
 
+<!-- Add case modal -->
 <div id="addCaseModal" class="modal" role="dialog" aria-labelledby="add-case-title" aria-modal="true">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h3 id="add-case-title">Add New Case</h3>
-      <button class="modal-close" onclick="closeAddCaseModal()" aria-label="Close modal">
-        <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
-        </svg>
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3 id="add-case-title">Add Case</h3>
+      <button class="ghost" onclick="closeAddCaseModal()" aria-label="Close">
+        <svg class="icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
       </button>
     </div>
     <div class="modal-body">
-      <div class="helper-callout">
-        <svg class="helper-callout-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
-        </svg>
-        <div class="helper-callout-content">
-          <div class="helper-callout-title">Quick Guide</div>
-          <div class="helper-callout-text">
-            1. Enter your receipt number below<br>
-            2. Click "Add &amp; Open API" to add the case and open the USCIS API tab<br>
-            3. Copy the JSON from the opened tab<br>
-            4. Paste it in the "Paste JSON" section
-          </div>
-        </div>
+      <div class="form-group">
+        <label for="modalReceiptInput">Receipt Number</label>
+        <input id="modalReceiptInput" type="text" placeholder="IOE1234567890" pattern="[A-Z]{3}[0-9]{10}"/>
+        <span class="hint">3 letters + 10 digits</span>
       </div>
-      <div class="add-case-form">
-        <div class="input-group">
-          <label for="modalReceiptInput">Receipt Number</label>
-          <input
-            id="modalReceiptInput"
-            type="text"
-            placeholder="IOE1234567890"
-            pattern="[A-Z]{3}[0-9]{10}"
-            aria-describedby="modal-receipt-hint"
-          />
-          <span id="modal-receipt-hint" class="hint">Format: 3 letters + 10 numbers (e.g., IOE1234567890)</span>
-        </div>
-        <div class="form-actions">
-          <button onclick="closeAddCaseModal()">Cancel</button>
-          <button class="primary" onclick="addCaseFromModal()">
-            <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"/>
-            </svg>
-            Add &amp; Open API
-          </button>
-        </div>
+      <div class="form-actions">
+        <button onclick="closeAddCaseModal()">Cancel</button>
+        <button class="primary" onclick="addCaseFromModal()">Add &amp; Open API</button>
       </div>
     </div>
   </div>
 </div>
 
+<!-- Hidden file input for import -->
+<input type="file" id="importFileInput" accept=".json" style="display:none"/>
+
+<!-- FAB: add case -->
 <button class="fab" id="fabAddCase" onclick="openAddCaseModal()" aria-label="Add new case">
   <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"/>
   </svg>
 </button>
 
+<footer>
+  <p>&copy; 2026 USCIS Case Tracker · <a href="https://github.com/humanstack/uscis-case-tracker" target="_blank" rel="noopener noreferrer">Open Source (MIT)</a></p>
+  <p><small>Not affiliated with USCIS. Always refer to official USCIS communications for important decisions.</small></p>
+</footer>
+
 <script>
-const USCIS_BASE="https://my.uscis.gov/account/case-service/api/cases/";
-const TZ="America/New_York";
+const USCIS_BASE = "https://my.uscis.gov/account/case-service/api/cases/";
+const TZ = "America/New_York";
 
-function loadReceipts(){return JSON.parse(localStorage.getItem("receipts")||"[]")}
-function saveReceipts(r){localStorage.setItem("receipts",JSON.stringify(r))}
-function loadCases(){return JSON.parse(localStorage.getItem("cases")||"{}")}
-function saveCases(c){localStorage.setItem("cases",JSON.stringify(c))}
+// ── Storage ──
+function loadReceipts() { return JSON.parse(localStorage.getItem("receipts") || "[]"); }
+function saveReceipts(r) { localStorage.setItem("receipts", JSON.stringify(r)); }
+function loadCases() { return JSON.parse(localStorage.getItem("cases") || "{}"); }
+function saveCases(c) { localStorage.setItem("cases", JSON.stringify(c)); }
 
-// Validate receipt number format
-function isValidReceipt(receipt) {
-  return /^[A-Z]{3}[0-9]{10}$/.test(receipt);
+// ── Privacy: masking ──
+let maskEnabled = localStorage.getItem("maskReceipts") !== "false"; // default on
+const maskCheckbox = document.getElementById("maskCheckbox");
+maskCheckbox.checked = maskEnabled;
+applyMask();
+
+maskCheckbox.addEventListener("change", () => {
+  maskEnabled = maskCheckbox.checked;
+  localStorage.setItem("maskReceipts", maskEnabled);
+  applyMask();
+  renderReceipts();
+  renderTimeline();
+  renderCaseSummary();
+});
+
+function applyMask() {
+  document.body.classList.toggle("mask-active", maskEnabled);
 }
 
-// Update UI based on progress
+function maskReceiptNumber(receipt) {
+  if (!receipt) return receipt;
+  return receipt.length > 8 ? receipt.substring(0, 8) + "XXXXX" : receipt;
+}
+
+function displayReceipt(receipt) {
+  return maskEnabled ? maskReceiptNumber(receipt) : receipt;
+}
+
+// ── Validation ──
+function isValidReceipt(receipt) { return /^[A-Z]{3}[0-9]{10}$/.test(receipt); }
+
+// ── Progress indicators ──
 function updateProgress() {
   const receipts = loadReceipts();
   const cases = loadCases();
   const hasReceipts = receipts.length > 0;
   const hasCases = Object.keys(cases).length > 0;
 
-  // Update step 1 indicator
-  const step1Indicator = document.getElementById('step1Indicator');
-  const step1Helper = document.getElementById('step1Helper');
-  const openTabsBtn = document.getElementById('openTabsBtn');
-
+  // Step 1
+  const s1 = document.getElementById("step1Indicator");
   if (hasReceipts) {
-    step1Indicator.classList.add('completed');
-    step1Indicator.innerHTML = `<svg viewBox="0 0 20 20" fill="currentColor" style="width: 1.25rem; height: 1.25rem;"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>`;
-    if (step1Helper) step1Helper.style.display = 'none';
-    openTabsBtn.disabled = false;
+    s1.classList.add("done");
+    s1.innerHTML = '✓';
+    document.getElementById("openTabsBtn").disabled = false;
   } else {
-    step1Indicator.classList.remove('completed');
-    step1Indicator.textContent = '1';
-    if (step1Helper) step1Helper.style.display = 'flex';
-    openTabsBtn.disabled = true;
+    s1.classList.remove("done");
+    s1.textContent = "1";
+    document.getElementById("openTabsBtn").disabled = true;
   }
 
-  // Update step 2 indicator
-  const step2Indicator = document.getElementById('step2Indicator');
-  const step2Helper = document.getElementById('step2Helper');
+  // Step 2
+  const s2 = document.getElementById("step2Indicator");
+  const helper = document.getElementById("step2Helper");
   if (hasCases) {
-    step2Indicator.classList.add('completed');
-    step2Indicator.innerHTML = `<svg viewBox="0 0 20 20" fill="currentColor" style="width: 1.25rem; height: 1.25rem;"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>`;
-    if (step2Helper) step2Helper.style.display = 'none';
+    s2.classList.add("done");
+    s2.innerHTML = '✓';
+    if (helper) helper.style.display = "none";
   } else {
-    step2Indicator.classList.remove('completed');
-    step2Indicator.textContent = '2';
-    if (step2Helper) step2Helper.style.display = 'flex';
+    s2.classList.remove("done");
+    s2.textContent = "2";
+    if (helper) helper.style.display = "flex";
   }
 
-  // Update step 3 indicator and export button
-  const step3Indicator = document.getElementById('step3Indicator');
-  const exportBtn = document.getElementById('exportBtn');
+  // Step 3
+  const s3 = document.getElementById("step3Indicator");
+  const exportBtn = document.getElementById("exportBtn");
   if (hasCases) {
-    step3Indicator.classList.add('completed');
-    step3Indicator.innerHTML = `<svg viewBox="0 0 20 20" fill="currentColor" style="width: 1.25rem; height: 1.25rem;"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>`;
-    if (exportBtn) exportBtn.style.display = 'inline-flex';
+    s3.classList.add("done");
+    s3.innerHTML = '✓';
+    exportBtn.style.display = "inline-flex";
   } else {
-    step3Indicator.classList.remove('completed');
-    step3Indicator.textContent = '3';
-    if (exportBtn) exportBtn.style.display = 'none';
+    s3.classList.remove("done");
+    s3.textContent = "3";
+    exportBtn.style.display = "none";
   }
 
-  // Auto-collapse onboarding sections when user has data
+  // Auto-collapse when user has data
   if (hasCases) {
-    const aboutSection = document.getElementById('aboutSection');
-    const receiptsSection = document.getElementById('receiptsSection');
-    const step2Section = document.getElementById('step2Section');
+    const saved = JSON.parse(localStorage.getItem("collapsedSections") || "{}");
+    if (saved.aboutSection === undefined) document.getElementById("aboutSection").classList.add("collapsed");
+    if (saved.receiptsSection === undefined) document.getElementById("receiptsSection").classList.add("collapsed");
 
-    // Auto-collapse About and Step 1 if not manually interacted with
-    const savedStates = JSON.parse(localStorage.getItem('collapsedSections') || '{}');
-    if (savedStates.aboutSection === undefined && aboutSection && !aboutSection.classList.contains('collapsed')) {
-      aboutSection.classList.add('collapsed');
-    }
-    if (savedStates.receiptsSection === undefined && receiptsSection && !receiptsSection.classList.contains('collapsed')) {
-      receiptsSection.classList.add('collapsed');
-    }
-
-    // Show FAB and quick stats
-    const fab = document.getElementById('fabAddCase');
-    if (fab) fab.classList.add('visible');
-
+    document.getElementById("fabAddCase").classList.add("visible");
     updateQuickStats(cases);
   } else {
-    // Hide FAB when no data
-    const fab = document.getElementById('fabAddCase');
-    if (fab) fab.classList.remove('visible');
-
-    // Hide quick stats
-    const quickStatsBar = document.getElementById('quickStatsBar');
-    if (quickStatsBar) quickStatsBar.style.display = 'none';
+    document.getElementById("fabAddCase").classList.remove("visible");
+    document.getElementById("quickStatsBar").style.display = "none";
   }
 }
 
-// Update quick stats
 function updateQuickStats(cases) {
-  const quickStatsBar = document.getElementById('quickStatsBar');
-  if (!quickStatsBar) return;
+  const bar = document.getElementById("quickStatsBar");
+  const total = Object.keys(cases).length;
+  if (total === 0) { bar.style.display = "none"; return; }
+  bar.style.display = "flex";
 
-  const totalCases = Object.keys(cases).length;
-  if (totalCases === 0) {
-    quickStatsBar.style.display = 'none';
-    return;
-  }
-
-  quickStatsBar.style.display = 'flex';
-
-  let completed = 0;
-  let inProgress = 0;
-  let totalUpdates = 0;
-
-  Object.values(cases).forEach(caseData => {
-    const latestData = caseData.history[caseData.history.length - 1].data;
-    if (latestData.closed === true) {
-      completed++;
-    } else {
-      inProgress++;
-    }
-    totalUpdates += caseData.history.length;
+  let completed = 0, inProgress = 0, totalUpdates = 0;
+  Object.values(cases).forEach(c => {
+    const d = c.history[c.history.length - 1].data;
+    d.closed === true ? completed++ : inProgress++;
+    totalUpdates += c.history.length;
   });
 
-  document.getElementById('statTotalCases').textContent = totalCases;
-  document.getElementById('statCompleted').textContent = completed;
-  document.getElementById('statInProgress').textContent = inProgress;
-  document.getElementById('statTotalUpdates').textContent = totalUpdates;
+  document.getElementById("statTotalCases").textContent = total;
+  document.getElementById("statCompleted").textContent = completed;
+  document.getElementById("statInProgress").textContent = inProgress;
+  document.getElementById("statTotalUpdates").textContent = totalUpdates;
 }
 
-// render receipts
+// ── Render receipts ──
 function renderReceipts() {
-  const cont = document.getElementById("receiptChips");
-  const collapsedCont = document.getElementById("receiptChipsCollapsed");
-
-  cont.innerHTML = "";
-  collapsedCont.innerHTML = "";
+  const main = document.getElementById("receiptChips");
+  const collapsed = document.getElementById("receiptChipsCollapsed");
+  main.innerHTML = "";
+  collapsed.innerHTML = "";
 
   loadReceipts().forEach(r => {
-    // Render for expanded view
+    // Main chip
     const chip = document.createElement("div");
     chip.className = "chip";
     chip.setAttribute("role", "listitem");
 
     const text = document.createElement("span");
-    text.textContent = r;
+    text.className = "sensitive";
+    text.textContent = displayReceipt(r);
     chip.appendChild(text);
 
-    const deleteBtn = document.createElement("button");
-    deleteBtn.className = "chip-delete";
-    deleteBtn.setAttribute("aria-label", `Remove receipt ${r}`);
-    deleteBtn.innerHTML = `
-      <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
-      </svg>
-    `;
-    deleteBtn.onclick = () => {
-      const arr = loadReceipts().filter(x => x !== r);
-      saveReceipts(arr);
+    const del = document.createElement("button");
+    del.className = "chip-x";
+    del.setAttribute("aria-label", "Remove " + maskReceiptNumber(r));
+    del.innerHTML = '<svg class="icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>';
+    del.onclick = () => {
+      saveReceipts(loadReceipts().filter(x => x !== r));
       renderReceipts();
       updateProgress();
     };
-    chip.appendChild(deleteBtn);
-    cont.appendChild(chip);
+    chip.appendChild(del);
+    main.appendChild(chip);
 
-    // Render for collapsed view with API link
-    const collapsedChip = document.createElement("button");
-    collapsedChip.className = "quick-link";
-    collapsedChip.style.cursor = "pointer";
-    collapsedChip.setAttribute("aria-label", `Open API tab for ${r}`);
-    collapsedChip.onclick = () => openSingleApiTab(r);
-
-    collapsedChip.innerHTML = `
-      <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
-        <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
-      </svg>
-      ${r}
-    `;
-    collapsedCont.appendChild(collapsedChip);
+    // Collapsed pill
+    const pill = document.createElement("button");
+    pill.className = "pill";
+    pill.onclick = (e) => { e.stopPropagation(); openSingleApiTab(r); };
+    pill.innerHTML = `<svg class="icon" viewBox="0 0 20 20" fill="currentColor"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg><span class="sensitive">${displayReceipt(r)}</span>`;
+    collapsed.appendChild(pill);
   });
 
   updateProgress();
 }
 
-// add receipt
+// ── Add receipt ──
 document.getElementById("addReceiptBtn").onclick = () => {
   const input = document.getElementById("receiptInput");
   const val = input.value.trim().toUpperCase();
-
-  if (!val) {
-    input.focus();
-    return;
-  }
-
+  if (!val) { input.focus(); return; }
   if (!isValidReceipt(val)) {
-    input.setCustomValidity("Please enter 3 letters followed by 10 numbers");
+    input.setCustomValidity("3 letters + 10 digits required");
     input.reportValidity();
     return;
   }
-
   input.setCustomValidity("");
   const arr = loadReceipts();
-
   if (arr.includes(val)) {
-    input.setCustomValidity("This receipt number is already added");
+    input.setCustomValidity("Already added");
     input.reportValidity();
     return;
   }
-
   arr.push(val);
   saveReceipts(arr);
   input.value = "";
   renderReceipts();
-  updateProgress();
-
-  // Show success feedback
   const btn = document.getElementById("addReceiptBtn");
-  btn.classList.add("success");
-  setTimeout(() => btn.classList.remove("success"), 1000);
+  btn.classList.add("success-flash");
+  setTimeout(() => btn.classList.remove("success-flash"), 800);
 };
 
-// open multiple tabs staggered
+// Enter key to add
+document.getElementById("receiptInput").addEventListener("keydown", e => {
+  if (e.key === "Enter") document.getElementById("addReceiptBtn").click();
+});
+
+// ── API tabs ──
 function openAllApiTabs() {
-  const rec=loadReceipts();
-  if(rec.length===0) return alert("Add receipts first");
-  rec.forEach((r,i)=>setTimeout(()=>window.open(USCIS_BASE+encodeURIComponent(r),"_blank"),i*300));
+  const rec = loadReceipts();
+  if (rec.length === 0) return alert("Add receipts first");
+  rec.forEach((r, i) => setTimeout(() => window.open(USCIS_BASE + encodeURIComponent(r), "_blank"), i * 300));
 }
 
-// open single API tab for a specific receipt
-function openSingleApiTab(receiptNumber) {
-  window.open(USCIS_BASE+encodeURIComponent(receiptNumber),"_blank");
-}
+function openSingleApiTab(r) { window.open(USCIS_BASE + encodeURIComponent(r), "_blank"); }
 
 document.getElementById("openTabsBtn").onclick = openAllApiTabs;
 
-// JSON viewer modal functions
+// ── Modal helpers ──
 function switchTab(tab) {
-  // Update tab buttons
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.classList.remove('active');
-  });
-  document.getElementById(tab + 'Tab').classList.add('active');
-
-  // Update tab content
-  document.querySelectorAll('.tab-content').forEach(content => {
-    content.classList.remove('active');
-  });
-  document.getElementById(tab + 'View').classList.add('active');
+  document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+  document.getElementById(tab + "Tab").classList.add("active");
+  document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+  document.getElementById(tab + "View").classList.add("active");
 }
 
-function formatDiffValue(value) {
-  if (typeof value === 'object' && value !== null) {
-    return JSON.stringify(value, null, 2);
-  }
-  return String(value);
-}
+function formatDiffValue(v) { return typeof v === "object" && v !== null ? JSON.stringify(v, null, 2) : String(v); }
 
 function renderDiff(changes) {
-  const diffViewer = document.getElementById('diffViewer');
-  diffViewer.innerHTML = '';
-
-  if (changes.length === 0) {
-    diffViewer.innerHTML = '<div class="diff-item">No changes detected</div>';
-    return;
-  }
-
-  changes.forEach(change => {
-    const item = document.createElement('div');
-    item.className = `diff-item diff-${change.type}`;
-
-    const path = document.createElement('div');
-    path.className = 'diff-path';
-    path.textContent = change.path || 'root';
-
-    const value = document.createElement('div');
-    value.className = 'diff-value';
-
-    if (change.type === 'changed') {
-      value.innerHTML = `From: ${formatDiffValue(change.old)}\nTo: ${formatDiffValue(change.new)}`;
-    } else {
-      value.textContent = formatDiffValue(change.value);
-    }
-
+  const dv = document.getElementById("diffViewer");
+  dv.innerHTML = "";
+  if (changes.length === 0) { dv.innerHTML = '<div class="diff-item">No changes detected</div>'; return; }
+  changes.forEach(ch => {
+    const item = document.createElement("div");
+    item.className = "diff-item diff-" + ch.type;
+    const path = document.createElement("div");
+    path.className = "diff-path";
+    path.textContent = ch.path || "root";
+    const val = document.createElement("div");
+    val.className = "diff-value";
+    val.textContent = ch.type === "changed" ? `From: ${formatDiffValue(ch.old)}\nTo: ${formatDiffValue(ch.new)}` : formatDiffValue(ch.value);
     item.appendChild(path);
-    item.appendChild(value);
-    diffViewer.appendChild(item);
+    item.appendChild(val);
+    dv.appendChild(item);
   });
 }
 
-function viewJSON(encodedData) {
+function viewJSON(encoded) {
   const modal = document.getElementById("jsonModal");
   const viewer = document.getElementById("jsonViewer");
-  const diffTab = document.getElementById('diffTab');
-
+  const diffTab = document.getElementById("diffTab");
   try {
-    const context = JSON.parse(decodeURIComponent(encodedData));
-
-    // Extract data and metadata
-    let data, receiptNumber, snapshotIndex;
-
-    if (context.caseContext) {
-      // New format with caseContext
-      data = context.caseContext.data;
-      receiptNumber = context.caseContext.receiptNumber;
-      snapshotIndex = context.caseContext.snapshotIndex;
-    } else {
-      // Old format or direct data
-      data = context;
-      receiptNumber = data.receiptNumber;
-    }
-
-    // Display the JSON data
+    const ctx = JSON.parse(decodeURIComponent(encoded));
+    let data, rn, idx;
+    if (ctx.caseContext) { data = ctx.caseContext.data; rn = ctx.caseContext.receiptNumber; idx = ctx.caseContext.snapshotIndex; }
+    else { data = ctx; rn = data.receiptNumber; }
     viewer.textContent = JSON.stringify(data, null, 2);
-
-    // Find previous snapshot for diff if we have context
-    if (receiptNumber && typeof snapshotIndex === 'number') {
+    if (rn && typeof idx === "number") {
       const cases = loadCases();
-      if (cases[receiptNumber] && snapshotIndex > 0) {
-        const prevData = cases[receiptNumber].history[snapshotIndex - 1].data;
-        const changes = computeJsonDiff(prevData, data);
-        renderDiff(changes);
-        diffTab.style.display = 'block';
-      } else {
-        diffTab.style.display = 'none';
-      }
-    } else {
-      diffTab.style.display = 'none';
-    }
-
-  } catch (e) {
-    console.error('Error displaying JSON:', e, encodedData);
-    viewer.textContent = "Error displaying JSON data";
-    diffTab.style.display = 'none';
-  }
-
-  // Reset to full view
-  switchTab('full');
-
+      if (cases[rn] && idx > 0) {
+        renderDiff(computeJsonDiff(cases[rn].history[idx - 1].data, data));
+        diffTab.style.display = "block";
+      } else diffTab.style.display = "none";
+    } else diffTab.style.display = "none";
+  } catch (e) { viewer.textContent = "Error displaying JSON"; diffTab.style.display = "none"; }
+  switchTab("full");
   modal.style.display = "block";
   document.body.style.overflow = "hidden";
 }
 
-function closeModal() {
-  const modal = document.getElementById("jsonModal");
-  modal.style.display = "none";
-  document.body.style.overflow = "";
-}
+function closeModal() { document.getElementById("jsonModal").style.display = "none"; document.body.style.overflow = ""; }
 
-// Mask receipt number for privacy
-function maskReceiptNumber(receipt) {
-  if (!receipt) return receipt;
-  return receipt.length > 8 ? receipt.substring(0, 8) + "XXXXX" : receipt;
-}
-
-// Round timestamp to nearest hour for Reddit export
-function toETRounded(iso) {
-  const d = new Date(iso);
-  if (isNaN(d)) return null;
-
-  // Round to nearest hour
-  const minutes = d.getMinutes();
-  if (minutes >= 30) {
-    d.setHours(d.getHours() + 1);
-  }
-  d.setMinutes(0, 0, 0); // Set minutes, seconds, and milliseconds to 0
-
-  const opts = {timeZone: TZ, year: 'numeric', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: true};
+// ── Export ──
+function toET(iso) {
+  const d = new Date(iso); if (isNaN(d)) return null;
+  const opts = { timeZone: TZ, year: "numeric", month: "short", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: true };
   const t = new Intl.DateTimeFormat("en-US", opts).format(d);
-  const dateKey = new Intl.DateTimeFormat("en-CA", {timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit'}).format(d);
-  const h = new Intl.DateTimeFormat("en-US", {timeZone: TZ, hour: '2-digit', hour12: false}).format(d);
-  return {text: t, dateKey, hour: +h};
+  const dateKey = new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" }).format(d);
+  const h = new Intl.DateTimeFormat("en-US", { timeZone: TZ, hour: "2-digit", hour12: false }).format(d);
+  return { text: t, dateKey, hour: +h };
 }
 
-// Generate Reddit markdown for timeline
+function toETRounded(iso) {
+  const d = new Date(iso); if (isNaN(d)) return null;
+  if (d.getMinutes() >= 30) d.setHours(d.getHours() + 1);
+  d.setMinutes(0, 0, 0);
+  const opts = { timeZone: TZ, year: "numeric", month: "short", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: true };
+  const t = new Intl.DateTimeFormat("en-US", opts).format(d);
+  const dateKey = new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" }).format(d);
+  const h = new Intl.DateTimeFormat("en-US", { timeZone: TZ, hour: "2-digit", hour12: false }).format(d);
+  return { text: t, dateKey, hour: +h };
+}
+
+function afterHours(et) { return et.hour < 9 || et.hour >= 17; }
+
+function getEventDescription(code) {
+  return { FTA0: "Biometric or other actions completed", SA: "Status Adjusted", FTA1: "Supervisor Review" }[code] || code;
+}
+
+function getEventInsight(eventCode, curr, prev) {
+  const base = { type: "info", message: getEventDescription(eventCode) };
+  if (eventCode === "FTA0") {
+    const prevEvents = prev?.events || [];
+    const ftaCount = prevEvents.filter(e => e.eventCode === "FTA0").length;
+    if (ftaCount === 1) return { type: "info", message: base.message + " (Usually paired with another FTA0 for FBI and biometric checks)" };
+    const lastFTA0 = prevEvents.filter(e => e.eventCode === "FTA0").pop();
+    if (lastFTA0) {
+      const weeks = (new Date(curr.updatedAtTimestamp) - new Date(lastFTA0.createdAtTimestamp)) / (7 * 24 * 60 * 60 * 1000);
+      if (weeks >= 2) return { type: "success", message: base.message + ` (Isolated FTA0 after ${Math.floor(weeks)} weeks - could be a good sign)` };
+    }
+    return base;
+  }
+  if (eventCode === "SA") return { type: "success", message: base.message + " ✅ Case approved!" };
+  if (eventCode === "FTA1") return { type: "info", message: base.message + " 👀" };
+  return base;
+}
+
 function generateTimelineMarkdown() {
   const items = buildTimeline();
-  if (items.length === 0) {
-    return null;
-  }
-
-  let text = "**USCIS Timeline**\n\n";
-  let currentDate = null;
-
+  if (items.length === 0) return null;
+  let text = "**USCIS Timeline**\n\n", currentDate = null;
   items.forEach(it => {
-    // Add date header if it's a new date
     if (currentDate !== it.et.dateKey) {
       currentDate = it.et.dateKey;
-      text += `\n**${new Date(currentDate).toLocaleDateString("en-US", {
-        month: "long",
-        day: "numeric",
-        year: "numeric"
-      })}**\n`;
+      text += `\n**${new Date(currentDate).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}**\n`;
     }
-
-    // Clean up the label
-    let label = it.label
-      .replace(/closed=true/g, "Case completed ✨")
-      .replace(/closed=false/g, "")
-      .replace(/undefined/g, "");
-
-    // Mask any receipt numbers in the label
-    const receiptPattern = /[A-Z]{3}[0-9]{10}/g;
-    label = label.replace(receiptPattern, match => maskReceiptNumber(match));
-
-    // Use rounded timestamp for Reddit export
-    const roundedET = toETRounded(it.when);
-
-    // Add the timeline item
-    text += `* ${roundedET.text} — ${label}`;
-
-    // Add flags (use rounded timestamp for consistency)
-    if (!afterHours(roundedET)) {
-      text += " 👋";
-    }
-
-    // Add insights for events
-    const eventMatch = label.match(/event ([A-Z0-9]+)/);
-    if (eventMatch) {
-      const insight = getEventInsight(eventMatch[1], it.caseContext.data, null);
-      if (insight) {
-        text += `\n  * _${insight.message}_`;
-      }
-    }
-
+    let label = it.label.replace(/closed=true/g, "Case completed ✨").replace(/closed=false/g, "").replace(/undefined/g, "");
+    label = label.replace(/[A-Z]{3}[0-9]{10}/g, m => maskReceiptNumber(m));
+    const rounded = toETRounded(it.when);
+    text += `* ${rounded.text} — ${label}`;
+    if (!afterHours(rounded)) text += " 👋";
+    const em = label.match(/event ([A-Z0-9]+)/);
+    if (em) { const ins = getEventInsight(em[1], it.caseContext.data, null); if (ins) text += `\n  * _${ins.message}_`; }
     text += "\n";
   });
-
   return text;
 }
 
-// Export timeline for Reddit
 function exportTimeline() {
   const text = generateTimelineMarkdown();
-  if (!text) {
-    alert("No timeline data to export");
-    return;
-  }
-
-  // Show preview modal
-  const modal = document.getElementById("exportModal");
-  const preview = document.getElementById("exportPreview");
-  preview.textContent = text;
-  modal.style.display = "block";
+  if (!text) { alert("No timeline data to export"); return; }
+  document.getElementById("exportPreview").textContent = text;
+  document.getElementById("exportModal").style.display = "block";
   document.body.style.overflow = "hidden";
 }
 
-// Copy export to clipboard
 function copyExport() {
-  const text = document.getElementById("exportPreview").textContent;
-  navigator.clipboard.writeText(text).then(() => {
+  navigator.clipboard.writeText(document.getElementById("exportPreview").textContent).then(() => {
     const btn = document.getElementById("copyBtn");
-    const originalText = btn.innerHTML;
-    btn.innerHTML = `
-      <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-      </svg>
-      Copied!
-    `;
-    btn.classList.add('success');
-    setTimeout(() => {
-      btn.innerHTML = originalText;
-      btn.classList.remove('success');
-    }, 2000);
-  }).catch(() => {
-    alert("Failed to copy to clipboard");
-  });
+    const orig = btn.textContent;
+    btn.textContent = "Copied!";
+    btn.classList.add("success-flash");
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove("success-flash"); }, 1500);
+  }).catch(() => alert("Failed to copy"));
 }
 
-// Close export modal
-function closeExportModal() {
-  const modal = document.getElementById("exportModal");
-  modal.style.display = "none";
-  document.body.style.overflow = "";
-}
+function closeExportModal() { document.getElementById("exportModal").style.display = "none"; document.body.style.overflow = ""; }
 
-// Close modals on outside click
-document.getElementById("jsonModal").onclick = (e) => {
-  if (e.target === e.currentTarget) closeModal();
-};
-
-document.getElementById("exportModal").onclick = (e) => {
-  if (e.target === e.currentTarget) closeExportModal();
-};
-
-// Close modals on Escape key
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    if (document.getElementById("jsonModal").style.display === "block") {
-      closeModal();
-    }
-    if (document.getElementById("exportModal").style.display === "block") {
-      closeExportModal();
-    }
-    if (document.getElementById("addCaseModal").style.display === "block") {
-      closeAddCaseModal();
-    }
-  }
-});
-
-// Add case modal functions
+// ── Add case modal ──
 function openAddCaseModal() {
-  const modal = document.getElementById("addCaseModal");
-  modal.style.display = "block";
+  document.getElementById("addCaseModal").style.display = "block";
   document.body.style.overflow = "hidden";
   document.getElementById("modalReceiptInput").focus();
 }
 
 function closeAddCaseModal() {
-  const modal = document.getElementById("addCaseModal");
-  modal.style.display = "none";
+  document.getElementById("addCaseModal").style.display = "none";
   document.body.style.overflow = "";
   document.getElementById("modalReceiptInput").value = "";
 }
@@ -2567,690 +1612,314 @@ function closeAddCaseModal() {
 function addCaseFromModal() {
   const input = document.getElementById("modalReceiptInput");
   const val = input.value.trim().toUpperCase();
-
-  if (!val) {
-    input.focus();
-    return;
-  }
-
-  if (!isValidReceipt(val)) {
-    input.setCustomValidity("Please enter 3 letters followed by 10 numbers");
-    input.reportValidity();
-    return;
-  }
-
+  if (!val) { input.focus(); return; }
+  if (!isValidReceipt(val)) { input.setCustomValidity("3 letters + 10 digits required"); input.reportValidity(); return; }
   input.setCustomValidity("");
   const arr = loadReceipts();
-
-  if (arr.includes(val)) {
-    input.setCustomValidity("This receipt number is already added");
-    input.reportValidity();
-    return;
-  }
-
+  if (arr.includes(val)) { input.setCustomValidity("Already added"); input.reportValidity(); return; }
   arr.push(val);
   saveReceipts(arr);
   renderReceipts();
-  updateProgress();
-
-  // Open API tab
-  window.open(USCIS_BASE+encodeURIComponent(val),"_blank");
-
-  // Close modal
+  window.open(USCIS_BASE + encodeURIComponent(val), "_blank");
   closeAddCaseModal();
-
-  // Scroll to paste JSON section
-  document.getElementById("step2Section").scrollIntoView({ behavior: 'smooth' });
+  document.getElementById("step2Section").scrollIntoView({ behavior: "smooth" });
 }
 
-// Close add case modal on outside click
-document.getElementById("addCaseModal").onclick = (e) => {
-  if (e.target === e.currentTarget) closeAddCaseModal();
-};
+// ── Close modals ──
+["jsonModal", "exportModal", "addCaseModal"].forEach(id => {
+  document.getElementById(id).onclick = e => { if (e.target === e.currentTarget) { document.getElementById(id).style.display = "none"; document.body.style.overflow = ""; } };
+});
 
-// Clear all data
-function clearAllData() {
-  if (!confirm("Are you sure you want to delete all receipts and case data? This cannot be undone.")) {
-    return;
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") {
+    ["jsonModal", "exportModal", "addCaseModal"].forEach(id => {
+      if (document.getElementById(id).style.display === "block") { document.getElementById(id).style.display = "none"; document.body.style.overflow = ""; }
+    });
   }
+});
 
+// ── Data management ──
+function exportData() {
+  const data = {
+    receipts: loadReceipts(),
+    cases: loadCases(),
+    exportedAt: new Date().toISOString(),
+    version: 1
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `uscis-tracker-backup-${new Date().toISOString().slice(0, 10)}.json`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function importData() {
+  document.getElementById("importFileInput").click();
+}
+
+document.getElementById("importFileInput").addEventListener("change", e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try {
+      const data = JSON.parse(ev.target.result);
+      if (!data.receipts || !data.cases) { alert("Invalid backup file format"); return; }
+      if (!confirm("This will replace all current data with the backup. Continue?")) return;
+      saveReceipts(data.receipts);
+      saveCases(data.cases);
+      renderReceipts();
+      renderTimeline();
+      updateProgress();
+      alert("Data restored successfully.");
+    } catch { alert("Failed to parse backup file"); }
+  };
+  reader.readAsText(file);
+  e.target.value = "";
+});
+
+function clearAllData() {
+  if (!confirm("Delete all receipts and case data? This cannot be undone.")) return;
   localStorage.removeItem("receipts");
   localStorage.removeItem("cases");
   localStorage.removeItem("collapsedSections");
-
   renderReceipts();
   renderTimeline();
   updateProgress();
-
-  alert("All data has been cleared.");
   location.reload();
 }
 
-// Compute differences between two JSON objects
+// ── JSON diff ──
 function computeJsonDiff(oldData, newData) {
-  const ignoreFields = ["updatedAtTimestamp"];
+  const ignore = ["updatedAtTimestamp"];
   const changes = [];
-
-  function compareValues(path, old, current) {
-    if (ignoreFields.includes(path)) return;
-
-    // Handle null/undefined
-    if (!old && current) {
-      changes.push({ path, type: 'added', value: current });
-      return;
-    }
-    if (old && !current) {
-      changes.push({ path, type: 'removed', value: old });
-      return;
-    }
-    if (!old && !current) return;
-
-    // Handle different types
-    if (typeof old !== typeof current) {
-      changes.push({
-        path,
-        type: 'changed',
-        old: old,
-        new: current
-      });
-      return;
-    }
-
-    // Handle arrays
+  function compare(path, old, cur) {
+    if (ignore.includes(path)) return;
+    if (!old && cur) { changes.push({ path, type: "added", value: cur }); return; }
+    if (old && !cur) { changes.push({ path, type: "removed", value: old }); return; }
+    if (!old && !cur) return;
+    if (typeof old !== typeof cur) { changes.push({ path, type: "changed", old, new: cur }); return; }
     if (Array.isArray(old)) {
-      if (path === 'events') {
-        // For events, compare by eventId
-        const oldIds = new Set(old.map(e => e.eventId));
-        const newIds = new Set(current.map(e => e.eventId));
-
-        current.forEach(e => {
-          if (!oldIds.has(e.eventId)) {
-            changes.push({
-              path: `${path}[${e.eventCode}]`,
-              type: 'added',
-              value: e
-            });
-          }
-        });
-      } else if (path === 'notices') {
-        // For notices, compare by letterId
-        const oldIds = new Set(old.map(n => n.letterId));
-        const newIds = new Set(current.map(n => n.letterId));
-
-        current.forEach(n => {
-          if (!oldIds.has(n.letterId)) {
-            changes.push({
-              path: `${path}[${n.actionType}]`,
-              type: 'added',
-              value: n
-            });
-          }
-        });
+      if (path === "events") {
+        const ids = new Set(old.map(e => e.eventId));
+        cur.forEach(e => { if (!ids.has(e.eventId)) changes.push({ path: `${path}[${e.eventCode}]`, type: "added", value: e }); });
+      } else if (path === "notices") {
+        const ids = new Set(old.map(n => n.letterId));
+        cur.forEach(n => { if (!ids.has(n.letterId)) changes.push({ path: `${path}[${n.actionType}]`, type: "added", value: n }); });
       }
       return;
     }
-
-    // Handle objects
-    if (typeof old === 'object') {
-      Object.keys({...old, ...current}).forEach(key => {
-        compareValues(
-          path ? `${path}.${key}` : key,
-          old[key],
-          current[key]
-        );
-      });
+    if (typeof old === "object") {
+      Object.keys({ ...old, ...cur }).forEach(k => compare(path ? `${path}.${k}` : k, old[k], cur[k]));
       return;
     }
-
-    // Handle primitive values
-    if (old !== current) {
-      changes.push({
-        path,
-        type: 'changed',
-        old: old,
-        new: current
-      });
-    }
+    if (old !== cur) changes.push({ path, type: "changed", old, new: cur });
   }
-
-  compareValues('', oldData, newData);
+  compare("", oldData, newData);
   return changes;
 }
 
-// Check if JSON data has changed
-function hasJsonChanged(oldData, newData) {
-  return computeJsonDiff(oldData, newData).length > 0;
-}
+function hasJsonChanged(old, cur) { return computeJsonDiff(old, cur).length > 0; }
 
-// Check if JSON response indicates an error or unauthorized state
-function isErrorResponse(data) {
-  // Check for explicit error response
-  if (data.error && !data.data) {
-    return true;
-  }
-  // Check for null response
-  if (data.data === null) {
-    return true;
-  }
-  return false;
-}
+function isErrorResponse(data) { return (data.error && !data.data) || data.data === null; }
 
-// save pasted JSON
+// ── Save JSON ──
 document.getElementById("saveJsonBtn").onclick = () => {
   const raw = document.getElementById("jsonText").value.trim();
   if (!raw) return;
-
   let data;
-  try {
-    data = JSON.parse(raw);
-  } catch(e) {
-    alert("Invalid JSON format. Please make sure you copied the entire response.");
-    return;
-  }
-
-  // Check for error response
+  try { data = JSON.parse(raw); } catch { alert("Invalid JSON. Make sure you copied the entire response."); return; }
   if (isErrorResponse(data)) {
-    const message = `Unable to read case data. This usually means you're not logged in to USCIS.\n\n` +
-                   `Please follow these steps:\n` +
-                   `1. Open a new tab and go to myaccount.uscis.gov\n` +
-                   `2. Sign in with your USCIS account\n` +
-                   `3. Come back here and try again\n\n` +
-                   `If you're already logged in, try logging out and back in.`;
-    alert(message);
+    alert("Unable to read case data. Make sure you're logged in to myaccount.uscis.gov, then try again.");
     return;
   }
-
-  if (!data.data || !data.data.receiptNumber) {
-    alert("Invalid response format. The JSON must contain case data with a receipt number.");
-    return;
-  }
+  if (!data.data || !data.data.receiptNumber) { alert("Invalid response — must contain case data with receipt number."); return; }
 
   const r = data.data.receiptNumber;
   const cases = loadCases();
 
-  // Check if this is a new receipt number
   if (!cases[r]) {
-    cases[r] = {
-      receiptNumber: r,
-      formType: data.data.formType,
-      history: []
-    };
-  }
-  // Check if this is new data
-  else if (cases[r].history.length > 0) {
-    const lastSnapshot = cases[r].history[cases[r].history.length - 1].data;
-    if (!hasJsonChanged(lastSnapshot, data.data)) {
-      alert("No changes detected for " + r + " since last snapshot");
+    cases[r] = { receiptNumber: r, formType: data.data.formType, history: [] };
+    // Auto-add to receipts if not already there
+    const receipts = loadReceipts();
+    if (!receipts.includes(r)) { receipts.push(r); saveReceipts(receipts); }
+  } else if (cases[r].history.length > 0) {
+    const last = cases[r].history[cases[r].history.length - 1].data;
+    if (!hasJsonChanged(last, data.data)) {
+      alert("No changes detected for " + maskReceiptNumber(r) + " since last snapshot.");
       document.getElementById("jsonText").value = "";
       return;
     }
   }
 
-  // Save new snapshot
-  cases[r].history.push({
-    at: new Date().toISOString(),
-    data: data.data
-  });
+  cases[r].history.push({ at: new Date().toISOString(), data: data.data });
   saveCases(cases);
   renderTimeline();
+  renderReceipts();
   updateProgress();
-
-  // Clear input and show success
   document.getElementById("jsonText").value = "";
 
-  // Show success message
   const btn = document.getElementById("saveJsonBtn");
-  const originalText = btn.innerHTML;
-  btn.innerHTML = `
-    <svg class="icon" viewBox="0 0 20 20" fill="currentColor">
-      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-    </svg>
-    Saved!
-  `;
-  btn.classList.add('success');
-  setTimeout(() => {
-    btn.innerHTML = originalText;
-    btn.classList.remove('success');
-  }, 2000);
+  const orig = btn.innerHTML;
+  btn.innerHTML = '✓ Saved!';
+  btn.classList.add("success-flash");
+  setTimeout(() => { btn.innerHTML = orig; btn.classList.remove("success-flash"); }, 1500);
 };
 
-// convert to ET
-function toET(iso){
-  const d=new Date(iso);if(isNaN(d))return null;
-  const opts={timeZone:TZ,year:'numeric',month:'short',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:true};
-  const t=new Intl.DateTimeFormat("en-US",opts).format(d);
-  const dateKey=new Intl.DateTimeFormat("en-CA",{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).format(d);
-  const h=new Intl.DateTimeFormat("en-US",{timeZone:TZ,hour:'2-digit',hour12:false}).format(d);
-  return {text:t,dateKey,hour:+h};
-}
-function afterHours(et){return et.hour<9||et.hour>=17}
-
-// Get event code description
-function getEventDescription(code) {
-  const eventMap = {
-    'FTA0': 'Biometric or other actions completed',
-    'SA': 'Status Adjusted',
-    'FTA1': 'Supervisor Review'
-  };
-  return eventMap[code] || code;
-}
-
-// Get insight for event code
-function getEventInsight(eventCode, curr, prev) {
-  // Base event description
-  const baseInsight = { type: 'info', message: getEventDescription(eventCode) };
-
-  if (eventCode === 'FTA0') {
-    // Check if this is a biometric-related FTA0 (usually comes in pairs)
-    const prevEvents = prev?.events || [];
-    const ftaCount = prevEvents.filter(e => e.eventCode === 'FTA0').length;
-    if (ftaCount === 1) {
-      return {
-        type: 'info',
-        message: `${baseInsight.message} (Usually paired with another FTA0 for FBI and biometric checks)`
-      };
-    }
-
-    // Check if this is an isolated FTA0 after weeks
-    const lastFTA0 = prevEvents.filter(e => e.eventCode === 'FTA0').pop();
-    if (lastFTA0) {
-      const weeksSinceLastFTA0 = (new Date(curr.updatedAtTimestamp) - new Date(lastFTA0.createdAtTimestamp)) / (7 * 24 * 60 * 60 * 1000);
-      if (weeksSinceLastFTA0 >= 2) {
-        return {
-          type: 'success',
-          message: `${baseInsight.message} (Isolated FTA0 after ${Math.floor(weeksSinceLastFTA0)} weeks - could be a good sign)`
-        };
-      }
-    }
-
-    return baseInsight;
-  }
-
-  if (eventCode === 'SA') {
-    return {
-      type: 'success',
-      message: `${baseInsight.message} ✅ Case approved!`
-    };
-  }
-
-  if (eventCode === 'FTA1') {
-    return {
-      type: 'info',
-      message: `${baseInsight.message} 👀`
-    };
-  }
-
-  return baseInsight;
-}
-
-// build unified timeline
-function buildTimeline(){
+// ── Timeline ──
+function buildTimeline() {
   const cases = loadCases();
   const items = [];
-
-  for(const c of Object.values(cases)){
-    const hist = c.history;
-    if(!hist) continue;
-
-    for(let i = 0; i < hist.length; i++){
-      const curr = hist[i].data;
-      const prev = i > 0 ? hist[i-1].data : null;
-      const snapshot = hist[i];
-
-      // Store the full case context for diff viewing
-      const caseContext = {
-        receiptNumber: curr.receiptNumber,
-        snapshotIndex: i,
-        data: curr
-      };
-
-      // baseline
-      if(!prev){
-        if(curr.submissionTimestamp) {
-          items.push({
-            when: curr.submissionTimestamp,
-            label: `${curr.formType} ${curr.receiptNumber} submitted`,
-            caseContext
-          });
-        }
-        if(curr.updatedAtTimestamp) {
-          items.push({
-            when: curr.updatedAtTimestamp,
-            label: `${curr.formType} ${curr.receiptNumber} last updated`,
-            caseContext
-          });
-        }
-        if(curr.closed !== undefined) {
-          items.push({
-            when: curr.updatedAtTimestamp || snapshot.at,
-            label: `${curr.formType} closed=${curr.closed}`,
-            caseContext
-          });
-        }
-        (curr.events||[]).forEach(e => items.push({
-          when: e.createdAtTimestamp,
-          label: `${curr.formType} ${e.eventCode} event`,
-          caseContext
-        }));
-        (curr.notices||[]).forEach(n => items.push({
-          when: n.generationDate,
-          label: `${curr.formType} notice: ${n.actionType}`,
-          caseContext
-        }));
+  for (const c of Object.values(cases)) {
+    if (!c.history) continue;
+    for (let i = 0; i < c.history.length; i++) {
+      const curr = c.history[i].data;
+      const prev = i > 0 ? c.history[i - 1].data : null;
+      const ctx = { receiptNumber: curr.receiptNumber, snapshotIndex: i, data: curr };
+      if (!prev) {
+        if (curr.submissionTimestamp) items.push({ when: curr.submissionTimestamp, label: `${curr.formType} ${curr.receiptNumber} submitted`, caseContext: ctx });
+        if (curr.updatedAtTimestamp) items.push({ when: curr.updatedAtTimestamp, label: `${curr.formType} ${curr.receiptNumber} last updated`, caseContext: ctx });
+        if (curr.closed !== undefined) items.push({ when: curr.updatedAtTimestamp || c.history[i].at, label: `${curr.formType} closed=${curr.closed}`, caseContext: ctx });
+        (curr.events || []).forEach(e => items.push({ when: e.createdAtTimestamp, label: `${curr.formType} ${e.eventCode} event`, caseContext: ctx }));
+        (curr.notices || []).forEach(n => items.push({ when: n.generationDate, label: `${curr.formType} notice: ${n.actionType}`, caseContext: ctx }));
       } else {
-        if(prev.updatedAtTimestamp !== curr.updatedAtTimestamp) {
-          items.push({
-            when: curr.updatedAtTimestamp,
-            label: `${curr.formType} ${curr.receiptNumber} updated`,
-            caseContext
-          });
-        }
-        if(prev.closed !== curr.closed) {
-          items.push({
-            when: curr.updatedAtTimestamp || snapshot.at,
-            label: `${curr.formType} closed=${curr.closed}`,
-            caseContext
-          });
-        }
-        const prevEv = new Set((prev.events||[]).map(e => e.eventId));
-        (curr.events||[]).forEach(e => {
-          if(!prevEv.has(e.eventId)) {
-            items.push({
-              when: e.createdAtTimestamp,
-              label: `${curr.formType} new event ${e.eventCode}`,
-              caseContext
-            });
-          }
-        });
-        const prevNo = new Set((prev.notices||[]).map(n => n.letterId));
-        (curr.notices||[]).forEach(n => {
-          if(!prevNo.has(n.letterId)) {
-            items.push({
-              when: n.generationDate,
-              label: `${curr.formType} new notice: ${n.actionType}`,
-              caseContext
-            });
-          }
-        });
+        if (prev.updatedAtTimestamp !== curr.updatedAtTimestamp) items.push({ when: curr.updatedAtTimestamp, label: `${curr.formType} ${curr.receiptNumber} updated`, caseContext: ctx });
+        if (prev.closed !== curr.closed) items.push({ when: curr.updatedAtTimestamp || c.history[i].at, label: `${curr.formType} closed=${curr.closed}`, caseContext: ctx });
+        const prevEv = new Set((prev.events || []).map(e => e.eventId));
+        (curr.events || []).forEach(e => { if (!prevEv.has(e.eventId)) items.push({ when: e.createdAtTimestamp, label: `${curr.formType} new event ${e.eventCode}`, caseContext: ctx }); });
+        const prevNo = new Set((prev.notices || []).map(n => n.letterId));
+        (curr.notices || []).forEach(n => { if (!prevNo.has(n.letterId)) items.push({ when: n.generationDate, label: `${curr.formType} new notice: ${n.actionType}`, caseContext: ctx }); });
       }
     }
   }
-
-  items.forEach(it => {it.et = toET(it.when);});
-  items.sort((a,b) => new Date(b.when) - new Date(a.when));
+  items.forEach(it => { it.et = toET(it.when); });
+  items.sort((a, b) => new Date(b.when) - new Date(a.when));
   return items;
 }
 
-// Calculate days since date
-function daysSince(dateString) {
-  const then = new Date(dateString);
-  const now = new Date();
-  const diff = now - then;
-  return Math.floor(diff / (1000 * 60 * 60 * 24));
-}
+function daysSince(d) { return Math.floor((new Date() - new Date(d)) / (1000 * 60 * 60 * 24)); }
 
-// Render case summary cards
 function renderCaseSummary() {
   const cases = loadCases();
-  const summaryContainer = document.getElementById('caseSummary');
-
-  if (Object.keys(cases).length === 0) {
-    summaryContainer.style.display = 'none';
-    return;
-  }
-
-  summaryContainer.style.display = 'grid';
-  summaryContainer.innerHTML = '';
-
-  Object.values(cases).forEach(caseData => {
-    const latestSnapshot = caseData.history[caseData.history.length - 1];
-    const data = latestSnapshot.data;
-    const daysSinceSubmission = data.submissionTimestamp ? daysSince(data.submissionTimestamp) : null;
-    const daysSinceUpdate = data.updatedAtTimestamp ? daysSince(data.updatedAtTimestamp) : null;
-    const isCompleted = data.closed === true;
-
-    const card = document.createElement('div');
-    card.className = 'case-card';
+  const el = document.getElementById("caseSummary");
+  if (Object.keys(cases).length === 0) { el.style.display = "none"; return; }
+  el.style.display = "grid";
+  el.innerHTML = "";
+  Object.values(cases).forEach(c => {
+    const d = c.history[c.history.length - 1].data;
+    const filed = d.submissionTimestamp ? daysSince(d.submissionTimestamp) : null;
+    const updated = d.updatedAtTimestamp ? daysSince(d.updatedAtTimestamp) : null;
+    const done = d.closed === true;
+    const card = document.createElement("div");
+    card.className = "case-card";
     card.innerHTML = `
-      <div class="case-card-header">
-        <div class="case-card-receipt">${data.receiptNumber}</div>
-        <div class="case-card-form">${data.formType || 'N/A'}</div>
+      <div class="case-card-top">
+        <span class="case-card-receipt sensitive">${displayReceipt(d.receiptNumber)}</span>
+        <span class="case-card-form">${d.formType || "N/A"}</span>
       </div>
       <div class="case-card-status">
-        ${isCompleted ?
-          '<span class="status-badge completed">✓ Completed</span>' :
-          '<span class="status-badge active">● In Progress</span>'
-        }
+        ${done ? '<span class="status-badge completed">✓ Completed</span>' : '<span class="status-badge active">● In Progress</span>'}
       </div>
-      <div class="case-card-status">${data.caseStatus || 'No status available'}</div>
+      ${d.caseStatus ? `<div class="case-card-status">${d.caseStatus}</div>` : ''}
       <div class="case-card-meta">
-        ${daysSinceSubmission !== null ? `
-          <div class="case-card-meta-item">
-            <span class="case-card-meta-label">Filed</span>
-            <span class="case-card-meta-value">${daysSinceSubmission}d ago</span>
-          </div>
-        ` : ''}
-        ${daysSinceUpdate !== null ? `
-          <div class="case-card-meta-item">
-            <span class="case-card-meta-label">Updated</span>
-            <span class="case-card-meta-value">${daysSinceUpdate}d ago</span>
-          </div>
-        ` : ''}
-        <div class="case-card-meta-item">
-          <span class="case-card-meta-label">Snapshots</span>
-          <span class="case-card-meta-value">${caseData.history.length}</span>
-        </div>
-      </div>
-    `;
-    summaryContainer.appendChild(card);
+        ${filed !== null ? `<div class="meta-item"><span class="meta-label">Filed</span><span class="meta-value">${filed}d ago</span></div>` : ''}
+        ${updated !== null ? `<div class="meta-item"><span class="meta-label">Updated</span><span class="meta-value">${updated}d ago</span></div>` : ''}
+        <div class="meta-item"><span class="meta-label">Snapshots</span><span class="meta-value">${c.history.length}</span></div>
+      </div>`;
+    el.appendChild(card);
   });
 }
 
-// render timeline
-function renderTimeline(){
-  const items=buildTimeline();
-  const cont=document.getElementById("timeline");
-  const timelineContainer=document.getElementById("timelineContainer");
-  cont.innerHTML="";
-
-  // Render case summary cards
+function renderTimeline() {
+  const items = buildTimeline();
+  const cont = document.getElementById("timeline");
+  const wrap = document.getElementById("timelineContainer");
+  cont.innerHTML = "";
   renderCaseSummary();
-
-  if(items.length===0){
-    timelineContainer.innerHTML = `
-      <div class="empty-state">
-        <svg class="empty-state-icon" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
-        </svg>
-        <div class="empty-state-title">No timeline data yet</div>
-        <div class="empty-state-description">
-          Add your receipt numbers and save a snapshot to start tracking your case timeline. Your updates will appear here.
-        </div>
-      </div>
-    `;
+  if (items.length === 0) {
+    wrap.innerHTML = `<div class="empty-state">
+      <div class="empty-state-title">No timeline data yet</div>
+      <div class="empty-state-desc">Add receipts and save a snapshot to start tracking your case timeline.</div>
+    </div>`;
     return;
   }
-
-  // Restore timeline container
-  if (!document.getElementById('timeline')) {
-    timelineContainer.innerHTML = '<div id="timeline" class="timeline" role="feed" aria-label="Case updates timeline"></div>';
+  if (!document.getElementById("timeline")) {
+    wrap.innerHTML = '<div id="timeline" class="timeline" style="margin:1rem" role="feed"></div>';
   }
 
-  const groups={};
-  items.forEach(it=>{if(!groups[it.et.dateKey]) groups[it.et.dateKey]=[];groups[it.et.dateKey].push(it)});
-  Object.keys(groups).sort((a,b)=>new Date(b)-new Date(a)).forEach(date=>{
-    const g=document.createElement("div");g.className="tgroup";
-    const d=document.createElement("div");d.className="tdate";d.textContent=new Date(date).toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"});g.appendChild(d);
-    groups[date].forEach(it=>{
-      const t=document.createElement("div");t.className="titem";
-      // Extract event code if this is an event
-      const eventMatch = it.label.match(/event ([A-Z0-9]+)/);
-      const eventCode = eventMatch ? eventMatch[1] : null;
+  const groups = {};
+  items.forEach(it => { if (!groups[it.et.dateKey]) groups[it.et.dateKey] = []; groups[it.et.dateKey].push(it); });
+  Object.keys(groups).sort((a, b) => new Date(b) - new Date(a)).forEach(date => {
+    const g = document.createElement("div"); g.className = "tgroup";
+    const d = document.createElement("div"); d.className = "tdate";
+    d.textContent = new Date(date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+    g.appendChild(d);
 
-      // Get insight if this is an event
-      const insight = eventCode ? getEventInsight(eventCode, it.caseContext.data, null) : null;
+    groups[date].forEach(it => {
+      const t = document.createElement("div"); t.className = "titem";
+      const evMatch = it.label.match(/event ([A-Z0-9]+)/);
+      const evCode = evMatch ? evMatch[1] : null;
+      const insight = evCode ? getEventInsight(evCode, it.caseContext.data, null) : null;
+      const biz = !afterHours(it.et);
+      const closed = it.label.includes("closed=true");
 
-      // Check if update was during business hours
-      const businessHours = !afterHours(it.et);
+      // Mask receipt numbers in label for display
+      let displayLabel = it.label
+        .replace(/closed=true/g, "Case completed ✨")
+        .replace(/closed=false/g, "");
+      if (maskEnabled) displayLabel = displayLabel.replace(/[A-Z]{3}[0-9]{10}/g, m => maskReceiptNumber(m));
 
-      // Check if this is a closed status update
-      const isClosed = it.label.includes('closed=true');
-
-      t.innerHTML = `
-        <div class="titem-content">
-          <div>
-            <div class="titem-time">${it.et.text}</div>
-            <div class="titem-main">
-              <span class="titem-label">${it.label.replace('closed=true', 'Case completed ✨').replace('closed=false', '')}</span>
-              ${businessHours ? '<span class="flag officer">👋 Officer</span>' : '<span class="flag system">⚙️ System</span>'}
-              ${isClosed ? '<span class="flag completed">🎉 Complete</span>' : ''}
-            </div>
-            ${insight ? `<div class="insight ${insight.type}">${insight.message}</div>` : ''}
-            ${isClosed ? `<div class="insight success">Congratulations! Your case has been completed.</div>` : ''}
+      t.innerHTML = `<div class="titem-row">
+        <div class="titem-body">
+          <div class="titem-time">${it.et.text}</div>
+          <div class="titem-main">
+            <span class="titem-label">${displayLabel}</span>
+            ${biz ? '<span class="flag officer">👋 Officer</span>' : '<span class="flag system">⚙️ System</span>'}
+            ${closed ? '<span class="flag complete">🎉 Complete</span>' : ''}
           </div>
-          <button class="view-json" onclick="viewJSON('${encodeURIComponent(JSON.stringify({ caseContext: it.caseContext }))}')" aria-label="View JSON data">
-            <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 002 4.25v11.5A2.25 2.25 0 004.25 18h11.5A2.25 2.25 0 0018 15.75V4.25A2.25 2.25 0 0015.75 2H4.25zm4.03 6.28a.75.75 0 00-1.06-1.06L4.97 9.47a.75.75 0 000 1.06l2.25 2.25a.75.75 0 001.06-1.06L6.56 10l1.72-1.72zm4.5-1.06a.75.75 0 10-1.06 1.06L13.44 10l-1.72 1.72a.75.75 0 101.06 1.06l2.25-2.25a.75.75 0 000-1.06l-2.25-2.25z" clip-rule="evenodd"/>
-            </svg>
-            JSON
-          </button>
-        </div>`;
+          ${insight ? `<div class="insight ${insight.type}">${insight.message}</div>` : ''}
+          ${closed ? '<div class="insight success">Congratulations! Your case has been completed.</div>' : ''}
+        </div>
+        <button class="btn-json" onclick="viewJSON('${encodeURIComponent(JSON.stringify({ caseContext: it.caseContext }))}')" aria-label="View JSON">
+          <svg class="icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 002 4.25v11.5A2.25 2.25 0 004.25 18h11.5A2.25 2.25 0 0018 15.75V4.25A2.25 2.25 0 0015.75 2H4.25zm4.03 6.28a.75.75 0 00-1.06-1.06L4.97 9.47a.75.75 0 000 1.06l2.25 2.25a.75.75 0 001.06-1.06L6.56 10l1.72-1.72zm4.5-1.06a.75.75 0 10-1.06 1.06L13.44 10l-1.72 1.72a.75.75 0 101.06 1.06l2.25-2.25a.75.75 0 000-1.06l-2.25-2.25z" clip-rule="evenodd"/></svg>
+          JSON
+        </button>
+      </div>`;
       g.appendChild(t);
     });
     cont.appendChild(g);
   });
 }
 
-// Collapsible section functionality
-function toggleCollapse(sectionId) {
-  const section = document.getElementById(sectionId);
-  section.classList.toggle('collapsed');
-
-  // Save collapsed state to localStorage
-  const collapsedSections = JSON.parse(localStorage.getItem('collapsedSections') || '{}');
-  collapsedSections[sectionId] = section.classList.contains('collapsed');
-  localStorage.setItem('collapsedSections', JSON.stringify(collapsedSections));
+// ── Collapsible ──
+function toggleCollapse(id) {
+  const sec = document.getElementById(id);
+  sec.classList.toggle("collapsed");
+  const saved = JSON.parse(localStorage.getItem("collapsedSections") || "{}");
+  saved[id] = sec.classList.contains("collapsed");
+  localStorage.setItem("collapsedSections", JSON.stringify(saved));
 }
 
-function initializeCollapsedSections() {
-  const cases = loadCases();
-  const hasCases = Object.keys(cases).length > 0;
-
-  // Get saved collapsed states
-  const savedCollapsedStates = JSON.parse(localStorage.getItem('collapsedSections') || '{}');
-
-  // Auto-collapse sections if user has cases (unless user has manually expanded them)
+function initCollapse() {
+  const hasCases = Object.keys(loadCases()).length > 0;
+  const saved = JSON.parse(localStorage.getItem("collapsedSections") || "{}");
   if (hasCases) {
-    if (savedCollapsedStates.aboutSection === undefined) {
-      document.getElementById('aboutSection').classList.add('collapsed');
-    }
-    if (savedCollapsedStates.receiptsSection === undefined) {
-      document.getElementById('receiptsSection').classList.add('collapsed');
-    }
+    if (saved.aboutSection === undefined) document.getElementById("aboutSection").classList.add("collapsed");
+    if (saved.receiptsSection === undefined) document.getElementById("receiptsSection").classList.add("collapsed");
   }
-
-  // Apply saved collapsed states
-  Object.entries(savedCollapsedStates).forEach(([sectionId, isCollapsed]) => {
-    const section = document.getElementById(sectionId);
-    if (section && isCollapsed) {
-      section.classList.add('collapsed');
-    }
+  Object.entries(saved).forEach(([id, collapsed]) => {
+    const el = document.getElementById(id);
+    if (el && collapsed) el.classList.add("collapsed");
   });
 }
 
-renderReceipts();renderTimeline();initializeCollapsedSections();updateProgress();
+// ── Init ──
+renderReceipts();
+renderTimeline();
+initCollapse();
+updateProgress();
 </script>
-
-<footer>
-  <div class="footer-content">
-    <div class="footer-section">
-      <h3>About USCIS Case Tracker</h3>
-      <p>
-        A free, open-source, privacy-focused case tracker for monitoring your USCIS immigration application status. Track I-485, I-765, I-131, and other immigration forms with complete privacy.
-      </p>
-    </div>
-
-    <div class="footer-section">
-      <h3>Features</h3>
-      <ul>
-        <li><a href="#receiptsSection">Track Multiple Cases</a></li>
-        <li><a href="#step2Section">Unified Timeline View</a></li>
-        <li><a href="#aboutSection">100% Client-Side Privacy</a></li>
-        <li>Smart Update Insights</li>
-        <li>Business Hours Detection</li>
-        <li>Reddit Export Feature</li>
-      </ul>
-    </div>
-
-    <div class="footer-section">
-      <h3>Immigration Forms</h3>
-      <ul>
-        <li>I-485 (Green Card / Adjustment of Status)</li>
-        <li>I-765 (Work Permit / EAD)</li>
-        <li>I-131 (Travel Document / Advance Parole)</li>
-        <li>I-140 (Immigrant Petition)</li>
-        <li>I-130 (Family-Based Petition)</li>
-        <li>N-400 (Naturalization / Citizenship)</li>
-      </ul>
-    </div>
-
-    <div class="footer-section">
-      <h3>Resources</h3>
-      <ul>
-        <li><a href="https://myaccount.uscis.gov/sign-in" target="_blank" rel="noopener">USCIS My Account</a></li>
-        <li><a href="https://github.com/humanstack/uscis-case-tracker" target="_blank" rel="noopener noreferrer">View on GitHub</a></li>
-        <li><a href="https://github.com/humanstack/uscis-case-tracker/issues" target="_blank" rel="noopener noreferrer">Report Issues</a></li>
-        <li><a href="https://github.com/humanstack/uscis-case-tracker/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2026 USCIS Case Tracker. Open source under MIT License.</p>
-    <p class="footer-keywords">
-      Track USCIS case status | Immigration case tracker | Green card status tracker | I-485 tracker | I-765 EAD tracker | I-131 advance parole tracker |
-      USCIS timeline tracker | Immigration status checker | Visa application tracker | Free USCIS tracker | Privacy-focused case tracker |
-      Client-side immigration tracker | Adjustment of status tracker | Work permit tracker | Travel document tracker | USCIS receipt number tracker |
-      Immigration case timeline | USCIS case updates | Green card application tracker | Immigration form tracker
-    </p>
-    <p style="margin-top: var(--space-md);">
-      <small>
-        Not affiliated with USCIS. This is an independent tool for tracking your own case status.
-        Always refer to official USCIS communications for important decisions.
-      </small>
-    </p>
-  </div>
-
-  <!-- Hidden SEO content for better indexing -->
-  <div class="sr-only-seo">
-    <h2>USCIS Case Status Tracker - Free Immigration Application Monitoring Tool</h2>
-    <p>
-      Track your USCIS immigration case status online with our free, privacy-focused case tracker.
-      Monitor green card applications (I-485), work permit (I-765 EAD), travel document (I-131 advance parole),
-      and other USCIS forms with complete privacy. Our client-side tracker ensures your immigration data never
-      leaves your browser.
-    </p>
-    <h3>Why Use Our USCIS Case Tracker?</h3>
-    <ul>
-      <li>100% free and open source USCIS case tracking</li>
-      <li>Privacy-first design - all data stays in your browser</li>
-      <li>Track unlimited immigration cases simultaneously</li>
-      <li>Unified timeline view for all your USCIS applications</li>
-      <li>Smart insights on case updates and officer actions</li>
-      <li>Business hours detection for officer activity</li>
-      <li>Easy export to Reddit for community support</li>
-      <li>Works with all USCIS forms: I-485, I-765, I-131, I-140, I-130, N-400, and more</li>
-    </ul>
-    <h3>Immigration Forms Supported</h3>
-    <p>
-      Our USCIS tracker supports all immigration forms including: I-485 Adjustment of Status (Green Card),
-      I-765 Employment Authorization Document (Work Permit/EAD), I-131 Travel Document (Advance Parole/Re-entry Permit),
-      I-140 Immigrant Worker Petition, I-130 Family-Based Immigration Petition, N-400 Naturalization Application (Citizenship),
-      I-129 Nonimmigrant Worker Petition (H-1B, L-1), I-129F Fiancé Visa, I-90 Green Card Renewal, I-751 Remove Conditions on Residence,
-      I-539 Extension/Change of Status, and all other USCIS case types.
-    </p>
-  </div>
-</footer>
 
 </body>
 </html>
