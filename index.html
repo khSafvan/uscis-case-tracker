@@ -67,27 +67,29 @@
       --transition: 150ms ease;
     }
 
-    [data-theme="dark"] {
-      --bg:       hsl(220 15% 10%);
-      --surface:  hsl(220 15% 14%);
-      --border:   hsl(220 13% 22%);
-      --text:     hsl(220 14% 96%);
-      --text-2:   hsl(220 10% 70%);
-      --text-3:   hsl(220 8% 50%);
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:       hsl(220 15% 10%);
+        --surface:  hsl(220 15% 14%);
+        --border:   hsl(220 13% 22%);
+        --text:     hsl(220 14% 96%);
+        --text-2:   hsl(220 10% 70%);
+        --text-3:   hsl(220 8% 50%);
 
-      --accent:       hsl(220 80% 60%);
-      --accent-soft:  hsl(220 40% 20%);
-      --accent-border:hsl(220 40% 35%);
+        --accent:       hsl(220 80% 60%);
+        --accent-soft:  hsl(220 40% 20%);
+        --accent-border:hsl(220 40% 35%);
 
-      --green:       hsl(152 50% 50%);
-      --green-soft:  hsl(152 40% 20%);
-      --green-border:hsl(152 40% 30%);
-      --amber:       hsl(38 80% 60%);
-      --amber-soft:  hsl(38 40% 20%);
-      --amber-border:hsl(38 40% 30%);
-      --red:         hsl(0 72% 60%);
-      --red-soft:    hsl(0 40% 20%);
-      --red-border:  hsl(0 40% 30%);
+        --green:       hsl(152 50% 50%);
+        --green-soft:  hsl(152 40% 20%);
+        --green-border:hsl(152 40% 30%);
+        --amber:       hsl(38 80% 60%);
+        --amber-soft:  hsl(38 40% 20%);
+        --amber-border:hsl(38 40% 30%);
+        --red:         hsl(0 72% 60%);
+        --red-soft:    hsl(0 40% 20%);
+        --red-border:  hsl(0 40% 30%);
+      }
     }
 
     html { scroll-behavior: smooth; }
@@ -964,9 +966,6 @@
       border: 0;
     }
 
-    /* ── Add case modal ── */
-    #addCaseModal .modal-box { max-width: 28rem; }
-
     .form-actions {
       display: flex;
       gap: 0.375rem;
@@ -1007,19 +1006,6 @@
     <h1>📋 USCIS Case Tracker</h1>
   </div>
   <div class="header-right">
-    <div style="display:flex; align-items:center; gap:0.5rem; font-size:0.75rem; color:var(--text-2);">
-      <svg class="icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 4.6 7.2 3.535a6.006 6.006 0 015.6 0c.225 1.064.688 2.194 1.256 2.786a6.012 6.012 0 011.912 2.706C14.71 8.52 13.565 9 12 9c-1.564 0-2.71-.48-3.968-.973C6.77 7.535 5.518 7 4.332 8.027zm-1.127 1.942a6.012 6.012 0 001.912 2.706c.568.591 1.031 1.722 1.256 2.786a6.006 6.006 0 005.6 0c.225-1.064.688-2.194 1.256-2.786a6.012 6.012 0 001.912-2.706C13.565 11 12.42 10.52 10.856 10.027 9.598 9.535 8.446 9 6.882 9c-1.564 0-2.71.48-3.677 1.069z" clip-rule="evenodd"/></svg>
-      <select id="tzSelect" onchange="changeTZ()" style="background:var(--surface); border:1px solid var(--border); color:var(--text); border-radius:4px; padding:2px 4px; font-size:0.75rem;">
-        <option value="America/New_York">Eastern (ET)</option>
-        <option value="America/Chicago">Central (CT)</option>
-        <option value="America/Denver">Mountain (MT)</option>
-        <option value="America/Los_Angeles">Pacific (PT)</option>
-        <option value="UTC">UTC</option>
-      </select>
-    </div>
-    <button onclick="toggleTheme()" class="ghost" style="padding:0.25rem; border-radius:50%;" aria-label="Toggle theme">
-      <svg id="themeIcon" class="icon" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
-    </button>
     <span class="badge badge-privacy">
       <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
         <path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"/>
@@ -1051,111 +1037,14 @@
     </label>
   </div>
 
-  <!-- Getting started -->
-  <section id="aboutSection" class="card collapsible" aria-labelledby="about-title">
-    <div class="card-head" onclick="toggleCollapse('aboutSection')">
-      <h2 id="about-title">Getting Started</h2>
-      <svg class="collapse-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
-      </svg>
-    </div>
-    <div class="collapsed-quick">
-      <a href="https://myaccount.uscis.gov/sign-in" target="_blank" rel="noopener" class="pill">
-        <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
-          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
-        </svg>
-        Login to USCIS
-      </a>
-    </div>
-    <div class="card-body">
-      <div class="callout">
-        <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
-        </svg>
-        <div class="callout-body">
-          <div class="callout-title">⚡ Quick Guide to Fetching Your Data</div>
-          <ol style="margin-top:0.5rem; list-style:none; margin-left:0; padding-left:0; display:flex; flex-direction:column; gap:0.5rem;">
-            <li style="display:flex; gap:0.5rem;"><span class="step-num" style="width:1.25rem; height:1.25rem; font-size:0.6875rem;">1</span><span>Make sure you are signed in to <a href="https://myaccount.uscis.gov/sign-in" target="_blank" rel="noopener">myaccount.uscis.gov</a> in another tab.</span></li>
-            <li style="display:flex; gap:0.5rem;"><span class="step-num" style="width:1.25rem; height:1.25rem; font-size:0.6875rem;">2</span><span>Add your receipt number below (starts with <code style="background:var(--surface); border:1px solid var(--border); padding:1px 4px; border-radius:3px; font-family:var(--mono); color:var(--amber);">IOE</code>).</span></li>
-            <li style="display:flex; gap:0.5rem;"><span class="step-num" style="width:1.25rem; height:1.25rem; font-size:0.6875rem;">3</span><span>Click <strong>Open API tabs</strong>. The raw JSON data will load in a new tab automatically.</span></li>
-            <li style="display:flex; gap:0.5rem;"><span class="step-num" style="width:1.25rem; height:1.25rem; font-size:0.6875rem;">4</span><span>Copy the JSON data (<strong>Ctrl+A</strong> then <strong>Ctrl+C</strong>).</span></li>
-            <li style="display:flex; gap:0.5rem;"><span class="step-num" style="width:1.25rem; height:1.25rem; font-size:0.6875rem;">5</span><span>Paste it into <strong>Step 2</strong> and click <strong>Save Snapshot</strong>.</span></li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Step 1: Receipts -->
-  <section id="receiptsSection" class="card collapsible" aria-labelledby="receipts-title">
-    <div class="card-head" onclick="toggleCollapse('receiptsSection')">
-      <h2 id="receipts-title">
-        <span class="step-num" id="step1Indicator">1</span>
-        Add Receipt Numbers
-      </h2>
-      <svg class="collapse-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
-      </svg>
-    </div>
-    <div class="collapsed-quick">
-      <button onclick="event.stopPropagation();openAllApiTabs()" class="pill" style="border:none;cursor:pointer">
-        <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
-          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
-        </svg>
-        Open All API tabs
-      </button>
-      <div id="receiptChipsCollapsed" style="display:flex;flex-wrap:wrap;gap:0.375rem" role="list"></div>
-    </div>
-    <div class="card-body">
-      <div class="input-row" style="margin-bottom:0.5rem">
-        <input id="receiptInput" type="text" placeholder="e.g. IOE1234567890" pattern="[A-Z]{3}[0-9]{10}" aria-label="Receipt number"/>
-        <button class="primary" id="addReceiptBtn">
-          <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"/>
-          </svg>
-          Add
-        </button>
-      </div>
-      <span class="hint">3 letters + 10 digits (e.g., IOE1234567890)</span>
-      <div id="receiptChips" class="chip-list" style="margin-top:0.5rem" role="list"></div>
-      <div style="margin-top:0.75rem">
-        <button id="openTabsBtn" disabled>
-          <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
-            <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
-          </svg>
-          Open API tabs
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Step 2: Paste JSON -->
+  <!-- Paste JSON -->
   <section class="card" aria-labelledby="json-title" id="step2Section">
     <div class="card-head">
-      <h2 id="json-title">
-        <span class="step-num" id="step2Indicator">2</span>
-        Paste Case Data
-      </h2>
+      <h2 id="json-title">Paste Case Data</h2>
     </div>
     <div class="card-body">
-      <div class="callout" id="step2Helper">
-        <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
-        </svg>
-        <div class="callout-body">
-          <div class="callout-text">
-            1. Log in to <a href="https://myaccount.uscis.gov/sign-in" target="_blank" rel="noopener">USCIS</a> →
-            2. Click "Open API tabs" above →
-            3. Copy the JSON →
-            4. Paste below
-          </div>
-        </div>
-      </div>
       <div class="form-group">
-        <textarea id="jsonText" placeholder="Paste raw JSON from the USCIS API tab here…" rows="6" aria-label="USCIS JSON response"></textarea>
+        <textarea id="jsonText" placeholder="Paste raw JSON from the USCIS API here…" rows="6" aria-label="USCIS JSON response"></textarea>
       </div>
       <button class="primary" id="saveJsonBtn">
         <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -1167,13 +1056,10 @@
     </div>
   </section>
 
-  <!-- Step 3: Timeline -->
+  <!-- Timeline -->
   <section class="card" aria-labelledby="timeline-title">
     <div class="card-head">
-      <h2 id="timeline-title">
-        <span class="step-num" id="step3Indicator">3</span>
-        Timeline
-      </h2>
+      <h2 id="timeline-title">Timeline</h2>
       <div class="card-head-actions">
         <button onclick="exportTimeline()" class="sm" id="exportBtn" style="display:none">Export for Reddit</button>
       </div>
@@ -1198,7 +1084,6 @@
         </div>
       </div>
       <div class="data-actions">
-        <button onclick="openAddCaseModal()" class="sm">+ Add Case</button>
         <button onclick="exportData()" class="sm">↓ Backup</button>
         <button onclick="importData()" class="sm">↑ Restore</button>
         <button onclick="clearAllData()" class="sm danger">Clear All</button>
@@ -1252,38 +1137,9 @@
   </div>
 </div>
 
-<!-- Add case modal -->
-<div id="addCaseModal" class="modal" role="dialog" aria-labelledby="add-case-title" aria-modal="true">
-  <div class="modal-box">
-    <div class="modal-head">
-      <h3 id="add-case-title">Add Case</h3>
-      <button class="ghost" onclick="closeAddCaseModal()" aria-label="Close">
-        <svg class="icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-      </button>
-    </div>
-    <div class="modal-body">
-      <div class="form-group">
-        <label for="modalReceiptInput">Receipt Number</label>
-        <input id="modalReceiptInput" type="text" placeholder="IOE1234567890" pattern="[A-Z]{3}[0-9]{10}"/>
-        <span class="hint">3 letters + 10 digits</span>
-      </div>
-      <div class="form-actions">
-        <button onclick="closeAddCaseModal()">Cancel</button>
-        <button class="primary" onclick="addCaseFromModal()">Add &amp; Open API</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- Hidden file input for import -->
 <input type="file" id="importFileInput" accept=".json" style="display:none"/>
 
-<!-- FAB: add case -->
-<button class="fab" id="fabAddCase" onclick="openAddCaseModal()" aria-label="Add new case">
-  <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-    <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"/>
-  </svg>
-</button>
 
 <footer>
   <p>&copy; 2026 USCIS Case Tracker · <a href="https://github.com/humanstack/uscis-case-tracker" target="_blank" rel="noopener noreferrer">Open Source (MIT)</a></p>
@@ -1291,44 +1147,11 @@
 </footer>
 
 <script>
-const USCIS_BASE = "https://my.uscis.gov/account/case-service/api/cases/";
-
-// ── Theme ──
-let currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-document.documentElement.setAttribute('data-theme', currentTheme);
-
-function toggleTheme() {
-  currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-  document.documentElement.setAttribute('data-theme', currentTheme);
-  localStorage.setItem('theme', currentTheme);
-  updateThemeIcon();
-}
-
-function updateThemeIcon() {
-  const icon = document.getElementById('themeIcon');
-  if (currentTheme === 'dark') {
-    icon.innerHTML = '<path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 4.22a1 1 0 011.415 0l.708.708a1 1 0 01-1.414 1.414l-.708-.708a1 1 0 010-1.414zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM14.22 15.78a1 1 0 010 1.415l-.708.708a1 1 0 01-1.414-1.414l.708-.708a1 1 0 011.415 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.22-1.22a1 1 0 01-1.415 0l-.708-.708a1 1 0 011.414-1.414l.708.708a1 1 0 010 1.415zM4 10a1 1 0 01-1 1H2a1 1 0 110-2h1a1 1 0 011 1zm1.22-4.22a1 1 0 010-1.415l.708-.708a1 1 0 011.414 1.414l-.708.708a1 1 0 01-1.415 0zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd"/>';
-  } else {
-    icon.innerHTML = '<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>';
-  }
-}
-updateThemeIcon();
-
 // ── Timezone ──
-let TZ = localStorage.getItem('tz') || "America/New_York";
-const tzSelect = document.getElementById('tzSelect');
-if(tzSelect) tzSelect.value = TZ;
-
-function changeTZ() {
-  TZ = tzSelect.value;
-  localStorage.setItem('tz', TZ);
-  renderTimeline();
-}
+const TZ = "America/New_York";
 
 
 // ── Storage ──
-function loadReceipts() { return JSON.parse(localStorage.getItem("receipts") || "[]"); }
-function saveReceipts(r) { localStorage.setItem("receipts", JSON.stringify(r)); }
 function loadCases() { return JSON.parse(localStorage.getItem("cases") || "{}"); }
 function saveCases(c) { localStorage.setItem("cases", JSON.stringify(c)); }
 
@@ -1342,7 +1165,6 @@ maskCheckbox.addEventListener("change", () => {
   maskEnabled = maskCheckbox.checked;
   localStorage.setItem("maskReceipts", maskEnabled);
   applyMask();
-  renderReceipts();
   renderTimeline();
   renderCaseSummary();
 });
@@ -1360,64 +1182,14 @@ function displayReceipt(receipt) {
   return maskEnabled ? maskReceiptNumber(receipt) : receipt;
 }
 
-// ── Validation ──
-function isValidReceipt(receipt) { return /^[A-Z]{3}[0-9]{10}$/.test(receipt); }
-
 // ── Progress indicators ──
 function updateProgress() {
-  const receipts = loadReceipts();
   const cases = loadCases();
-  const hasReceipts = receipts.length > 0;
   const hasCases = Object.keys(cases).length > 0;
-
-  // Step 1
-  const s1 = document.getElementById("step1Indicator");
-  if (hasReceipts) {
-    s1.classList.add("done");
-    s1.innerHTML = '✓';
-    document.getElementById("openTabsBtn").disabled = false;
-  } else {
-    s1.classList.remove("done");
-    s1.textContent = "1";
-    document.getElementById("openTabsBtn").disabled = true;
-  }
-
-  // Step 2
-  const s2 = document.getElementById("step2Indicator");
-  const helper = document.getElementById("step2Helper");
+  document.getElementById("exportBtn").style.display = hasCases ? "inline-flex" : "none";
   if (hasCases) {
-    s2.classList.add("done");
-    s2.innerHTML = '✓';
-    if (helper) helper.style.display = "none";
-  } else {
-    s2.classList.remove("done");
-    s2.textContent = "2";
-    if (helper) helper.style.display = "flex";
-  }
-
-  // Step 3
-  const s3 = document.getElementById("step3Indicator");
-  const exportBtn = document.getElementById("exportBtn");
-  if (hasCases) {
-    s3.classList.add("done");
-    s3.innerHTML = '✓';
-    exportBtn.style.display = "inline-flex";
-  } else {
-    s3.classList.remove("done");
-    s3.textContent = "3";
-    exportBtn.style.display = "none";
-  }
-
-  // Auto-collapse when user has data
-  if (hasCases) {
-    const saved = JSON.parse(localStorage.getItem("collapsedSections") || "{}");
-    if (saved.aboutSection === undefined) document.getElementById("aboutSection").classList.add("collapsed");
-    if (saved.receiptsSection === undefined) document.getElementById("receiptsSection").classList.add("collapsed");
-
-    document.getElementById("fabAddCase").classList.add("visible");
     updateQuickStats(cases);
   } else {
-    document.getElementById("fabAddCase").classList.remove("visible");
     document.getElementById("quickStatsBar").style.display = "none";
   }
 }
@@ -1441,88 +1213,6 @@ function updateQuickStats(cases) {
   document.getElementById("statTotalUpdates").textContent = totalUpdates;
 }
 
-// ── Render receipts ──
-function renderReceipts() {
-  const main = document.getElementById("receiptChips");
-  const collapsed = document.getElementById("receiptChipsCollapsed");
-  main.innerHTML = "";
-  collapsed.innerHTML = "";
-
-  loadReceipts().forEach(r => {
-    // Main chip
-    const chip = document.createElement("div");
-    chip.className = "chip";
-    chip.setAttribute("role", "listitem");
-
-    const text = document.createElement("span");
-    text.className = "sensitive";
-    text.textContent = displayReceipt(r);
-    chip.appendChild(text);
-
-    const del = document.createElement("button");
-    del.className = "chip-x";
-    del.setAttribute("aria-label", "Remove " + maskReceiptNumber(r));
-    del.innerHTML = '<svg class="icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>';
-    del.onclick = () => {
-      saveReceipts(loadReceipts().filter(x => x !== r));
-      renderReceipts();
-      updateProgress();
-    };
-    chip.appendChild(del);
-    main.appendChild(chip);
-
-    // Collapsed pill
-    const pill = document.createElement("button");
-    pill.className = "pill";
-    pill.onclick = (e) => { e.stopPropagation(); openSingleApiTab(r); };
-    pill.innerHTML = `<svg class="icon" viewBox="0 0 20 20" fill="currentColor"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg><span class="sensitive">${displayReceipt(r)}</span>`;
-    collapsed.appendChild(pill);
-  });
-
-  updateProgress();
-}
-
-// ── Add receipt ──
-document.getElementById("addReceiptBtn").onclick = () => {
-  const input = document.getElementById("receiptInput");
-  const val = input.value.trim().toUpperCase();
-  if (!val) { input.focus(); return; }
-  if (!isValidReceipt(val)) {
-    input.setCustomValidity("3 letters + 10 digits required");
-    input.reportValidity();
-    return;
-  }
-  input.setCustomValidity("");
-  const arr = loadReceipts();
-  if (arr.includes(val)) {
-    input.setCustomValidity("Already added");
-    input.reportValidity();
-    return;
-  }
-  arr.push(val);
-  saveReceipts(arr);
-  input.value = "";
-  renderReceipts();
-  const btn = document.getElementById("addReceiptBtn");
-  btn.classList.add("success-flash");
-  setTimeout(() => btn.classList.remove("success-flash"), 800);
-};
-
-// Enter key to add
-document.getElementById("receiptInput").addEventListener("keydown", e => {
-  if (e.key === "Enter") document.getElementById("addReceiptBtn").click();
-});
-
-// ── API tabs ──
-function openAllApiTabs() {
-  const rec = loadReceipts();
-  if (rec.length === 0) return alert("Add receipts first");
-  rec.forEach((r, i) => setTimeout(() => window.open(USCIS_BASE + encodeURIComponent(r), "_blank"), i * 300));
-}
-
-function openSingleApiTab(r) { window.open(USCIS_BASE + encodeURIComponent(r), "_blank"); }
-
-document.getElementById("openTabsBtn").onclick = openAllApiTabs;
 
 // ── Modal helpers ──
 function switchTab(tab) {
@@ -1664,43 +1354,15 @@ function copyExport() {
 
 function closeExportModal() { document.getElementById("exportModal").style.display = "none"; document.body.style.overflow = ""; }
 
-// ── Add case modal ──
-function openAddCaseModal() {
-  document.getElementById("addCaseModal").style.display = "block";
-  document.body.style.overflow = "hidden";
-  document.getElementById("modalReceiptInput").focus();
-}
-
-function closeAddCaseModal() {
-  document.getElementById("addCaseModal").style.display = "none";
-  document.body.style.overflow = "";
-  document.getElementById("modalReceiptInput").value = "";
-}
-
-function addCaseFromModal() {
-  const input = document.getElementById("modalReceiptInput");
-  const val = input.value.trim().toUpperCase();
-  if (!val) { input.focus(); return; }
-  if (!isValidReceipt(val)) { input.setCustomValidity("3 letters + 10 digits required"); input.reportValidity(); return; }
-  input.setCustomValidity("");
-  const arr = loadReceipts();
-  if (arr.includes(val)) { input.setCustomValidity("Already added"); input.reportValidity(); return; }
-  arr.push(val);
-  saveReceipts(arr);
-  renderReceipts();
-  window.open(USCIS_BASE + encodeURIComponent(val), "_blank");
-  closeAddCaseModal();
-  document.getElementById("step2Section").scrollIntoView({ behavior: "smooth" });
-}
 
 // ── Close modals ──
-["jsonModal", "exportModal", "addCaseModal"].forEach(id => {
+["jsonModal", "exportModal"].forEach(id => {
   document.getElementById(id).onclick = e => { if (e.target === e.currentTarget) { document.getElementById(id).style.display = "none"; document.body.style.overflow = ""; } };
 });
 
 document.addEventListener("keydown", e => {
   if (e.key === "Escape") {
-    ["jsonModal", "exportModal", "addCaseModal"].forEach(id => {
+    ["jsonModal", "exportModal"].forEach(id => {
       if (document.getElementById(id).style.display === "block") { document.getElementById(id).style.display = "none"; document.body.style.overflow = ""; }
     });
   }
@@ -1709,7 +1371,6 @@ document.addEventListener("keydown", e => {
 // ── Data management ──
 function exportData() {
   const data = {
-    receipts: loadReceipts(),
     cases: loadCases(),
     exportedAt: new Date().toISOString(),
     version: 1
@@ -1733,11 +1394,9 @@ document.getElementById("importFileInput").addEventListener("change", e => {
   reader.onload = ev => {
     try {
       const data = JSON.parse(ev.target.result);
-      if (!data.receipts || !data.cases) { alert("Invalid backup file format"); return; }
+      if (!data.cases) { alert("Invalid backup file format"); return; }
       if (!confirm("This will replace all current data with the backup. Continue?")) return;
-      saveReceipts(data.receipts);
       saveCases(data.cases);
-      renderReceipts();
       renderTimeline();
       updateProgress();
       alert("Data restored successfully.");
@@ -1748,11 +1407,9 @@ document.getElementById("importFileInput").addEventListener("change", e => {
 });
 
 function clearAllData() {
-  if (!confirm("Delete all receipts and case data? This cannot be undone.")) return;
-  localStorage.removeItem("receipts");
+  if (!confirm("Delete all case data? This cannot be undone.")) return;
   localStorage.removeItem("cases");
   localStorage.removeItem("collapsedSections");
-  renderReceipts();
   renderTimeline();
   updateProgress();
   location.reload();
@@ -1809,9 +1466,6 @@ document.getElementById("saveJsonBtn").onclick = () => {
 
   if (!cases[r]) {
     cases[r] = { receiptNumber: r, formType: data.data.formType, history: [] };
-    // Auto-add to receipts if not already there
-    const receipts = loadReceipts();
-    if (!receipts.includes(r)) { receipts.push(r); saveReceipts(receipts); }
   } else if (cases[r].history.length > 0) {
     const last = cases[r].history[cases[r].history.length - 1].data;
     if (!hasJsonChanged(last, data.data)) {
@@ -1824,7 +1478,6 @@ document.getElementById("saveJsonBtn").onclick = () => {
   cases[r].history.push({ at: new Date().toISOString(), data: data.data });
   saveCases(cases);
   renderTimeline();
-  renderReceipts();
   updateProgress();
   document.getElementById("jsonText").value = "";
 
@@ -1908,7 +1561,7 @@ function renderTimeline() {
   if (items.length === 0) {
     wrap.innerHTML = `<div class="empty-state">
       <div class="empty-state-title">No timeline data yet</div>
-      <div class="empty-state-desc">Add receipts and save a snapshot to start tracking your case timeline.</div>
+      <div class="empty-state-desc">Paste your USCIS API JSON above and click Save Snapshot to start tracking.</div>
     </div>`;
     return;
   }
@@ -1970,12 +1623,7 @@ function toggleCollapse(id) {
 }
 
 function initCollapse() {
-  const hasCases = Object.keys(loadCases()).length > 0;
   const saved = JSON.parse(localStorage.getItem("collapsedSections") || "{}");
-  if (hasCases) {
-    if (saved.aboutSection === undefined) document.getElementById("aboutSection").classList.add("collapsed");
-    if (saved.receiptsSection === undefined) document.getElementById("receiptsSection").classList.add("collapsed");
-  }
   Object.entries(saved).forEach(([id, collapsed]) => {
     const el = document.getElementById(id);
     if (el && collapsed) el.classList.add("collapsed");
@@ -1983,7 +1631,6 @@ function initCollapse() {
 }
 
 // ── Init ──
-renderReceipts();
 renderTimeline();
 initCollapse();
 updateProgress();
