@@ -67,6 +67,29 @@
       --transition: 150ms ease;
     }
 
+    [data-theme="dark"] {
+      --bg:       hsl(220 15% 10%);
+      --surface:  hsl(220 15% 14%);
+      --border:   hsl(220 13% 22%);
+      --text:     hsl(220 14% 96%);
+      --text-2:   hsl(220 10% 70%);
+      --text-3:   hsl(220 8% 50%);
+
+      --accent:       hsl(220 80% 60%);
+      --accent-soft:  hsl(220 40% 20%);
+      --accent-border:hsl(220 40% 35%);
+
+      --green:       hsl(152 50% 50%);
+      --green-soft:  hsl(152 40% 20%);
+      --green-border:hsl(152 40% 30%);
+      --amber:       hsl(38 80% 60%);
+      --amber-soft:  hsl(38 40% 20%);
+      --amber-border:hsl(38 40% 30%);
+      --red:         hsl(0 72% 60%);
+      --red-soft:    hsl(0 40% 20%);
+      --red-border:  hsl(0 40% 30%);
+    }
+
     html { scroll-behavior: smooth; }
 
     body {
@@ -984,11 +1007,24 @@
     <h1>📋 USCIS Case Tracker</h1>
   </div>
   <div class="header-right">
+    <div style="display:flex; align-items:center; gap:0.5rem; font-size:0.75rem; color:var(--text-2);">
+      <svg class="icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 4.6 7.2 3.535a6.006 6.006 0 015.6 0c.225 1.064.688 2.194 1.256 2.786a6.012 6.012 0 011.912 2.706C14.71 8.52 13.565 9 12 9c-1.564 0-2.71-.48-3.968-.973C6.77 7.535 5.518 7 4.332 8.027zm-1.127 1.942a6.012 6.012 0 001.912 2.706c.568.591 1.031 1.722 1.256 2.786a6.006 6.006 0 005.6 0c.225-1.064.688-2.194 1.256-2.786a6.012 6.012 0 001.912-2.706C13.565 11 12.42 10.52 10.856 10.027 9.598 9.535 8.446 9 6.882 9c-1.564 0-2.71.48-3.677 1.069z" clip-rule="evenodd"/></svg>
+      <select id="tzSelect" onchange="changeTZ()" style="background:var(--surface); border:1px solid var(--border); color:var(--text); border-radius:4px; padding:2px 4px; font-size:0.75rem;">
+        <option value="America/New_York">Eastern (ET)</option>
+        <option value="America/Chicago">Central (CT)</option>
+        <option value="America/Denver">Mountain (MT)</option>
+        <option value="America/Los_Angeles">Pacific (PT)</option>
+        <option value="UTC">UTC</option>
+      </select>
+    </div>
+    <button onclick="toggleTheme()" class="ghost" style="padding:0.25rem; border-radius:50%;" aria-label="Toggle theme">
+      <svg id="themeIcon" class="icon" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+    </button>
     <span class="badge badge-privacy">
       <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
         <path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"/>
       </svg>
-      100% Local · No Servers
+      Local
     </span>
     <a href="https://github.com/humanstack/uscis-case-tracker" class="link-github" target="_blank" rel="noopener noreferrer" aria-label="Source code on GitHub">
       <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -1038,13 +1074,13 @@
           <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
         </svg>
         <div class="callout-body">
-          <div class="callout-title">How it works</div>
-          <ol>
-            <li>Log in to <a href="https://myaccount.uscis.gov/sign-in" target="_blank" rel="noopener">myaccount.uscis.gov</a> in another tab</li>
-            <li>Add your receipt numbers below (e.g., IOE1234567890)</li>
-            <li>Click "Open API tabs" to open the USCIS JSON endpoints</li>
-            <li>Copy the JSON from each tab and paste it into Step 2</li>
-            <li>Your timeline updates with each snapshot</li>
+          <div class="callout-title">⚡ Quick Guide to Fetching Your Data</div>
+          <ol style="margin-top:0.5rem; list-style:none; margin-left:0; padding-left:0; display:flex; flex-direction:column; gap:0.5rem;">
+            <li style="display:flex; gap:0.5rem;"><span class="step-num" style="width:1.25rem; height:1.25rem; font-size:0.6875rem;">1</span><span>Make sure you are signed in to <a href="https://myaccount.uscis.gov/sign-in" target="_blank" rel="noopener">myaccount.uscis.gov</a> in another tab.</span></li>
+            <li style="display:flex; gap:0.5rem;"><span class="step-num" style="width:1.25rem; height:1.25rem; font-size:0.6875rem;">2</span><span>Add your receipt number below (starts with <code style="background:var(--surface); border:1px solid var(--border); padding:1px 4px; border-radius:3px; font-family:var(--mono); color:var(--amber);">IOE</code>).</span></li>
+            <li style="display:flex; gap:0.5rem;"><span class="step-num" style="width:1.25rem; height:1.25rem; font-size:0.6875rem;">3</span><span>Click <strong>Open API tabs</strong>. The raw JSON data will load in a new tab automatically.</span></li>
+            <li style="display:flex; gap:0.5rem;"><span class="step-num" style="width:1.25rem; height:1.25rem; font-size:0.6875rem;">4</span><span>Copy the JSON data (<strong>Ctrl+A</strong> then <strong>Ctrl+C</strong>).</span></li>
+            <li style="display:flex; gap:0.5rem;"><span class="step-num" style="width:1.25rem; height:1.25rem; font-size:0.6875rem;">5</span><span>Paste it into <strong>Step 2</strong> and click <strong>Save Snapshot</strong>.</span></li>
           </ol>
         </div>
       </div>
@@ -1256,7 +1292,39 @@
 
 <script>
 const USCIS_BASE = "https://my.uscis.gov/account/case-service/api/cases/";
-const TZ = "America/New_York";
+
+// ── Theme ──
+let currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+document.documentElement.setAttribute('data-theme', currentTheme);
+
+function toggleTheme() {
+  currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  localStorage.setItem('theme', currentTheme);
+  updateThemeIcon();
+}
+
+function updateThemeIcon() {
+  const icon = document.getElementById('themeIcon');
+  if (currentTheme === 'dark') {
+    icon.innerHTML = '<path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 4.22a1 1 0 011.415 0l.708.708a1 1 0 01-1.414 1.414l-.708-.708a1 1 0 010-1.414zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM14.22 15.78a1 1 0 010 1.415l-.708.708a1 1 0 01-1.414-1.414l.708-.708a1 1 0 011.415 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.22-1.22a1 1 0 01-1.415 0l-.708-.708a1 1 0 011.414-1.414l.708.708a1 1 0 010 1.415zM4 10a1 1 0 01-1 1H2a1 1 0 110-2h1a1 1 0 011 1zm1.22-4.22a1 1 0 010-1.415l.708-.708a1 1 0 011.414 1.414l-.708.708a1 1 0 01-1.415 0zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd"/>';
+  } else {
+    icon.innerHTML = '<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>';
+  }
+}
+updateThemeIcon();
+
+// ── Timezone ──
+let TZ = localStorage.getItem('tz') || "America/New_York";
+const tzSelect = document.getElementById('tzSelect');
+if(tzSelect) tzSelect.value = TZ;
+
+function changeTZ() {
+  TZ = tzSelect.value;
+  localStorage.setItem('tz', TZ);
+  renderTimeline();
+}
+
 
 // ── Storage ──
 function loadReceipts() { return JSON.parse(localStorage.getItem("receipts") || "[]"); }
